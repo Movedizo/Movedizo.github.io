@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?4dqlcq');
+  src:  url('fonts/icomoon.eot?4dqlcq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4dqlcq') format('truetype'),
+    url('fonts/icomoon.woff?4dqlcq') format('woff'),
+    url('fonts/icomoon.svg?4dqlcq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chart-pie:before {
+  content: "\e900";
+}
+.icon-checkmark:before {
+  content: "\e901";
+}
+.icon-checkmark-outline:before {
+  content: "\e902";
+}
+.icon-envelope:before {
+  content: "\e903";
+}
+.icon-corazn:before {
+  content: "\e904";
+}
+.icon-home:before {
+  content: "\e905";
+}
+.icon-hot:before {
+  content: "\e906";
+}
+.icon-menu:before {
+  content: "\e907";
+}
+.icon-mood-happy-outline:before {
+  content: "\e908";
+}
+.icon-mood-happy-solid:before {
+  content: "\e909";
+}
+.icon-mood-neutral-outline:before {
+  content: "\e90a";
+}
+.icon-mood-neutral-solid:before {
+  content: "\e90b";
+}
+.icon-mood-sad-outline:before {
+  content: "\e90c";
+}
+.icon-mood-sad-solid:before {
+  content: "\e90d";
+}
+.icon-queue:before {
+  content: "\e90e";
+}
+.icon-search:before {
+  content: "\e919";
+}
+.icon-send:before {
+  content: "\e90f";
+}
+.icon-share-alt:before {
+  content: "\e910";
+}
+.icon-thumbs-down:before {
+  content: "\e911";
+}
+.icon-thumbs-up:before {
+  content: "\e912";
+}
+.icon-usuario:before {
+  content: "\e913";
+}
+.icon-agregar-usuario:before {
+  content: "\e914";
+}
+.icon-volume-off:before {
+  content: "\e915";
+}
+.icon-volume-up:before {
+  content: "\e916";
+}
+.icon-zoom-in:before {
+  content: "\e917";
+}
+.icon-zoom-out:before {
+  content: "\e918";
+}
