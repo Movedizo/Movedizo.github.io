@@ -163,7 +163,7 @@ header nav {
     z-index:0;
 }
  
-.carrusel>articule {
+.carrusel>article {
     float: left;
     height: 203px;
     margin-right: 5px;
