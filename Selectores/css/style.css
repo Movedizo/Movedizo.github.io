@@ -153,6 +153,7 @@ footer article {
 	display: flex;
 	flex-direction: column;
 }
+
 footer .logoFooter {
 	margin: 20px;
 	display: flex;
@@ -161,6 +162,7 @@ footer .logoFooter {
 	position: relative;
 	bottom: 30px;
 }
+
 footer .logoFooter article {
 	margin: 20px;
 	min-width: 150px;
@@ -183,7 +185,8 @@ footer ul li {
 footer div p {
 	font-size: 12px;
 }
-footer media{
+
+footer media {
 	margin-top: 10px;
 }
 
@@ -204,7 +207,7 @@ footer media{
 		margin: 10px;
 		min-height: 150px;
 		padding: 0px;
-		border-bottom:none;
+		border-bottom: none;
 	}
 
 	footer .logoFooter {
@@ -222,64 +225,76 @@ footer media{
 	}
 
 }
-.fondoLanzamiento{
-	/*background-image: url("../img/fondoLanzamiento.jpg");
+
+.fondoLanzamiento {
+	background-image: url("../img/fondoLanzamiento.jpg");
+	/*
 	opacity: 0.5;
 	z-index: -10;*/
 }
-.mainLazamiento{
+
+.mainLazamiento {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.mainLazamiento h2{
+
+.mainLazamiento h2 {
 	color: #B69723;
 	-webkit-text-stroke: 0.5px black;
 	font-size: 40px;
 	margin: 20px;
 }
-.mainLazamiento section{
+
+.mainLazamiento section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.mainLazamiento section h1{
+
+.mainLazamiento section h1 {
 	font-size: 50px;
 	padding: 35px;
 	color: rgb(248, 219, 109);
 }
-.mainLazamiento article{
+
+.mainLazamiento article {
 	display: flex;
 	align-items: flex-end;
 }
-.mainLazamiento article div{
+
+.mainLazamiento article div {
 	padding: 35px;
 	font-size: 30px;
 	max-width: 800px;
 }
-.mainLazamiento article div h3{
+
+.mainLazamiento article div h3 {
 	color: rgb(248, 219, 109);
 	padding-bottom: 25px;
 }
-.mainLazamiento article div img{
+
+.mainLazamiento article div img {
 	width: 350px;
 	height: 350px;
 }
-.mainLazamiento .anuncioHeader{
+
+.mainLazamiento .anuncioHeader {
 	align-items: flex-start;
 	background-image: url("../img/anuncioHeader4.jpg");
 	background-size: cover;
 	width: 100%;
-	z-index: -3;
 }
-.fondoNegro{
+
+.fondoNegro {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	background-color: black;
 	opacity: 0.5;
 }
-.anuncioHeader article div button{
+
+.mainLazamiento button {
 	width: 150px;
 	height: 35px;
 	border-radius: 15px;
@@ -287,15 +302,18 @@ footer media{
 	font-size: 15px;
 	font-weight: bold;
 }
+
 .third {
-  color: #160f11;
-  box-shadow: 0 0 40px 40px #565546 inset, 0 0 0 0 #c5bd47;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+	color: #160f11;
+	box-shadow: 0 0 40px 40px #565546 inset, 0 0 0 0 #c5bd47;
+	-webkit-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
 }
+
 .third:hover {
-  box-shadow: 0 0 10px 0 #565546 inset, 0 0 10px 4px #c5bd47;
+	box-shadow: 0 0 10px 0 #565546 inset, 0 0 10px 4px #c5bd47;
 }
+
 .fifth {
 	border-color: #88AC21;
 	border-radius: 0;
@@ -305,100 +323,180 @@ footer media{
 	z-index: 1;
 	-webkit-transition: color 350ms ease-in-out;
 	transition: color 350ms ease-in-out;
-  }
-  .fifth:after {
+}
+
+.fifth:after {
 	content: '';
 	position: absolute;
 	display: block;
 	top: 0;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
+	transform: translateX(-50%);
 	width: 0;
 	height: 100%;
 	background: #88AC21;
 	z-index: -1;
 	-webkit-transition: width 350ms ease-in-out;
 	transition: width 350ms ease-in-out;
-  }
-  .fifth:hover {
+}
+
+.fifth:hover {
 	color: #fff;
-  }
-  .fifth:hover:after {
+}
+
+.fifth:hover:after {
 	width: 110%;
-  }
-  .razas article{
+}
+
+.razas article {
 	display: flex;
-  }
-  .mainLazamiento .razas h3{
+}
+
+.mainLazamiento .razas h3 {
 	color: #B69723;
 	-webkit-text-stroke: 0.5px black;
-  }
-  .razas article div{
+}
+
+.razas article div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  }
-  .mainLazamiento .razas img{
+}
+
+.mainLazamiento .razas img {
 	background-size: cover;
 	background-position: center;
 	margin: 10px;
 	width: 400px;
 	height: 410px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
-  }
-  .mainLazamiento .caracteristicas ul{
+}
+
+.mainLazamiento .caracteristicas ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-  }
-  .mainLazamiento .caracteristicas li{
+}
+
+.mainLazamiento .caracteristicas li {
 	margin: 20px;
-  }
-  .mainLazamiento .caracteristicas li div{
+}
+
+.mainLazamiento .caracteristicas li div {
 	display: flex;
 	width: 300px;
 	height: 300px;
 	align-items: flex-end;
-  }
-  .mainLazamiento .caracteristicas .imgCaracteristica1{
-	background-image:url("../img/Caracteristicas1.jpg");
+	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
+}
+
+.mainLazamiento .caracteristicas li div :hover {
+	/*Como evito que el hover pase a los hijos y arreglar 
+													 que es mas ancho de lo que deberia*/
+	border: solid 3px rgb(248, 219, 109);
+	color: #fff;
+}
+
+.mainLazamiento .caracteristicas .imgCaracteristica1 {
+	background-image: url("../img/Caracteristicas1.jpg");
 	background-size: cover;
-  }
-  .mainLazamiento .caracteristicas .imgCaracteristica2{
-	background-image:url("../img/Caracteristicas2.jpg");
-	background-size: cover;
-	background-position: center;
-  }
-  .mainLazamiento .caracteristicas .imgCaracteristica3{
-	background-image:url("../img/Caracteristicas3.jpg");
-	background-size: cover;
-	background-position: center;
-  }
-  .mainLazamiento .caracteristicas .imgCaracteristica4{
-	background-image:url("../img/Caracteristicas4.jpg");
-	background-position: center;
-	background-size: cover;
-  }
-  .mainLazamiento .caracteristicas .imgCaracteristica5{
-	background-image:url("../img/Caracteristicas5.jpg");
+}
+
+.mainLazamiento .caracteristicas .imgCaracteristica2 {
+	background-image: url("../img/ejercitoangel.webp");
 	background-size: cover;
 	background-position: center;
-  }
-  .mainLazamiento .caracteristicas .imgCaracteristica6{
-	background-image:url("../img/Caracteristicas6.jpg");
+}
+
+.mainLazamiento .caracteristicas .imgCaracteristica3 {
+	background-image: url("../img/Caracteristicas3.jpg");
 	background-size: cover;
 	background-position: center;
-  }
-  .mainLazamiento .caracteristicas li div img{
+}
+
+.mainLazamiento .caracteristicas .imgCaracteristica4 {
+	background-image: url("../img/Caracteristicas4.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.mainLazamiento .caracteristicas .imgCaracteristica5 {
+	background-image: url("../img/Caracteristicas5.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.mainLazamiento .caracteristicas .imgCaracteristica6 {
+	background-image: url("../img/Caracteristicas6.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.mainLazamiento .caracteristicas li div img {
 	position: absolute;
 	width: 300px;
 	height: 300px;
-  }
-  .mainLazamiento .caracteristicas li div h4{
+}
+
+.mainLazamiento .caracteristicas li div h4 {
 	color: rgb(248, 219, 109);
 	font-size: 25px;
 	-webkit-text-stroke: 0.5px black;
 	padding: 20px;
 	z-index: 5;
-  }
+}
+
+.mainLazamiento .container {
+	width: 70%;
+	background-color: rgba(241, 229, 229, 0.651);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.mainLazamiento .container h5 {
+	font-size: 18px;
+	line-height: 1.5;
+	text-align: left;
+	/*Como separa los parrafos*/
+}
+
+.heroes ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.heroes ul li {
+	margin: 15px;
+	width: 250px;
+	height: 300px;
+	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
+}
+.fondoDemonioHeroe{
+	background-image:url("../img/demonHeroe.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.fondoAngelHeroe{
+	background-image:url("../img/angelHeroe.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.heroes ul li img{
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 50%;
+}
+.heroes ul li h4{
+	font-size: 20px;
+	color: rgb(248, 219, 109);
+	-webkit-text-stroke: 0.5px black;
+	margin: 5px 5px 5px 8px;
+}
+.heroes ul li p{
+	margin: 5px 5px 5px 8px;
+	font-size: 16px;
+	color: rgb(248, 219, 109);
+}
