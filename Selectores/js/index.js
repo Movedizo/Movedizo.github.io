@@ -12,7 +12,7 @@ function iniciarindex() {
     });
 }
 
-var current = 0;
+/*var current = 0;
 var imagenes = new Array();
  
 $(document).ready(function() {
@@ -57,4 +57,4 @@ $(document).ready(function() {
  
         return false;
     }); 
- });
+ });*/
