@@ -12,6 +12,18 @@ function iniciarindex() {
     });
 }
 
+function pasarcaratula() {
+    "use strict"
+    document.querySelector('#btnCaratula').addEventListener("click", function () {
+        document.querySelector('#menuHamburguesa').classList.add("desaparecer");
+        document.querySelector('#menuPerfil').classList.toggle("desaparecer");
+    });
+    document.querySelector('#btnHamburguesa').addEventListener("click", function () {
+        document.querySelector('#menuPerfil').classList.add("desaparecer");
+        document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
+    });
+}
+
 /*var current = 0;
 var imagenes = new Array();
  

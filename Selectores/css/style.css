@@ -130,50 +130,7 @@ header nav {
 	display: none;
 }
 
-/*.carrusel {
-    float:left;
-    width:600px;
-    overflow:hidden;
-    height:203px;
-    position:relative;
-    margin-top:20px;
-    margin-bottom:20px;
-}
- 
-.carrusel .left-arrow {
-    position:absolute;
-    left:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
- 
-.carrusel .right-arrow {
-    position:absolute;
-    right:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
- 
-.carrusel {
-    width:4000px;
-    left:0px;
-    position:absolute;
-    z-index:0;
-}
- 
-.carrusel>article {
-    float: left;
-    height: 203px;
-    margin-right: 5px;
-    width: 195px;
-    text-align:center;
-}
- 
-.carrusel img {
-    cursor:pointer;
-}*/
+
 
 footer {
 	display: flex;
@@ -266,7 +223,65 @@ footer media {
 		flex-direction: row;
 		align-items: center;
 	}
+}
 
+.invertir{
+	transform: scaleX(-1);
+}
+
+.caratula{
+	background-color: #B69723;/*va pasando juego a juego*/
+	background-size: cover;
+	width: 100%;
+}
+
+.carruselmixto {
+    float:left;
+    width:600px;
+    overflow:hidden;
+    height:203px;
+    position:relative;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+ 
+.carruselmixto .left-arrow {
+    position:absolute;
+    left:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+ 
+.carruselmixto .right-arrow {
+    position:absolute;
+    right:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+ 
+.carruselmixto {
+    width:4000px;
+    left:0px;
+    position:absolute;
+    z-index:0;
+}
+ 
+.carruselmixto>article {
+    float: left;
+    height: 203px;
+    margin-right: 5px;
+    width: 195px;
+    text-align:center;
+}
+ 
+.carruselmixto img {
+    cursor:pointer;
+}
+
+.carruseles{
+	background-color: rgb(25, 66, 101);
 }
 
 .fondoLanzamiento{
