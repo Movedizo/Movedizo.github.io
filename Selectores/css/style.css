@@ -5,6 +5,7 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
+	box-sizing: border-box;
 }
 
 a {
@@ -220,11 +221,7 @@ footer .media {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-	}
-}
-
-.invertir{
-	transform: scaleX(-1);
+	}	
 }
 
 .caratula{
@@ -233,33 +230,63 @@ footer .media {
 	width: 100%;
 }
 
-.flechaizq img, .flechader img{
-	width: 40px;
-	height: 40px;
+h1{
+	font-size: 40px;
+	margin: 60px 10px 10px 20px;
+	color:black
+}
+
+.cardsimple {
+	background-size: cover;
+	background-position: center;
+	z-index: -10;
+}
+
+.carddoble {
+	background-size: cover;
+	background-position: center;
+	z-index: -10;
+}
+
+.carddoble h4, .cardsimple h4{
+	font-size: 22px;
+	margin: 15px 20px 15px 20px;
+	color:black;
+}
+
+.carddoble h3, .cardsimple h3 {
+	font-size: 32px;
+	margin: 3px 20px 15px 20px;
+	color:black
+}
+
+.carddoble h5, .cardsimple h5{
+	font-size: 16px;
+	margin: 10px 20px 15px 20px;
+	color: black;
 }
 
 .cardsimple{
 	width: 290px;
 	height: 235px;
-	border-radius: 20px;	
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	z-index: -5;
 }
 
 .carddoble{
 	width: 290px;
 	height: 490px;
-	border-radius: 20px;	
+	border-radius: 20px;
+	z-index: -5;
 }
 
 .carmixtosimple{
 	width: 290px;
 	height: 490px;
 	border-radius: 20px;
-}
-
-.carmixtosimple .cardsimple{
-	width: 290px;
-	height: 235px;
-	border-radius: 20px;
+	z-index: -5;	
 }
 
 .carddoble img, .cardsimple img{
@@ -270,70 +297,42 @@ footer .media {
 	border-radius: 15px;
 }
 
-.carddoble h3 .cardsimple h3{
-	font-style: inter;
-	font-weight: 500;
-	font-size: 32px;
-	line-height: 39px;
-	color: #160f11;
-}
-	
-.carddoble h4{
-	font-style: inter;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 29px;
-	color: #160f11;
+.carddoble button {
+	width: 250px;
+	height: 35px;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.carddoble h5 .cardsimple h5{
-	font-style: inter;
-	font-weight: 500;
-	font-size: 22px;
-	line-height: 27px;
-	color: #160f11;
+.cardsimple button {
+	width: 150px;
+	height: 35px;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.carruselmixtonl, .carruselmixtospv{
+.slider-containerNL, .slider-containerLMC, .slider-containerSPV {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 1450px;
+	height: 500px;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	margin-left: 20px;
 }
 
-.carruselsimplec, .carruselsimpletj{
-	
-}
-
-.carruselmixtonl{
-	height: 600px;
-	width: 1360px;
-	left: 30px;
-	top: 840px;		
-}
-
-.carruselsimpletj{
-	height: 360px;
-	width: 1360px;
-	left: 30px;
-	top: 1470px;
-	
-}
-
-.carruseldoblelmc{
-	height: 600px;
-	width: 1360px;
-	left: 30px;
-	top: 1860px;
+.slider-containerTJ, .slider-containerC {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 1450px;
+	height: 250px;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	margin-left: 20px;
 }
 
-.carruselmixtospv{
-	height: 600px;
-	width: 1360px;
-	left: 30px;
-	top: 2490px;
+.slider-containerC{
+	margin-bottom: 70px;
 }
 
 .fondoLanzamiento {
@@ -601,6 +600,7 @@ footer .media {
 	text-align: left;
 	/*Como separa los parrafos*/
 }
+
 .slider-container {
 	display: flex;
 	width: 800px;
