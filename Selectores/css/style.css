@@ -130,8 +130,6 @@ header nav {
 	display: none;
 }
 
-
-
 footer {
 	display: flex;
 	flex-direction: column-reverse;
@@ -235,16 +233,107 @@ footer .media {
 	width: 100%;
 }
 
-.carddoble, .cardsimple{
-	margin: 15px;
-	width: 250px;
-	height: 300px;
-	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
+.flechaizq img, .flechader img{
+	width: 40px;
+	height: 40px;
+}
+
+.cardsimple{
+	width: 290px;
+	height: 235px;
+	border-radius: 20px;	
+}
+
+.carddoble{
+	width: 290px;
+	height: 490px;
+	border-radius: 20px;	
+}
+
+.carmixtosimple{
+	width: 290px;
+	height: 490px;
+	border-radius: 20px;
+}
+
+.carmixtosimple .cardsimple{
+	width: 290px;
+	height: 235px;
+	border-radius: 20px;
 }
 
 .carddoble img, .cardsimple img{
+	object-fit: cover;
 	width: 250px;
-	height: 300px;
+	height: 200px;
+	margin: 20px;
+	border-radius: 15px;
+}
+
+.carddoble h3 .cardsimple h3{
+	font-style: inter;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 39px;
+	color: #160f11;
+}
+	
+.carddoble h4{
+	font-style: inter;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	color: #160f11;
+}
+
+.carddoble h5 .cardsimple h5{
+	font-style: inter;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 27px;
+	color: #160f11;
+}
+
+.carruselmixtonl{
+	height: 600px;
+	width: 90%;
+	left: 5%;
+	top: 840px;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.carruselsimpletj{
+	position: relative;
+	height: 360px;
+	width: 90%;
+	left: 5%;
+	top: 1460px;
+}
+
+.carruseldoblelmc{
+	position: relative;
+	height: 600px;
+	width: 90%;
+	left: 5%;
+	top: 1810px;	
+}
+
+.carruselmixtospv{
+	position: relative;
+	height: 600px;
+	width: 90%;
+	left: 5%;
+	top: 840px;	
+}
+
+.carruselsimplec{
+	position: relative;
+	height: 360px;
+	width: 90%;
+	left: 5%;
+	top: 1460px;
 }
 
 .fondoLanzamiento{
