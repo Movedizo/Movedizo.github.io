@@ -336,7 +336,6 @@ footer .media {
 	top: 2490px;
 }
 
-<<<<<<< HEAD
 .fondoLanzamiento {
 	opacity: 0.5;
 	z-index: -10;
@@ -344,19 +343,6 @@ footer .media {
 	width: 100%;
 	height: 100%;
 	background-repeat: initial;
-=======
-.carruselsimplec{
-	height: 360px;
-	width: 1360px;
-	left: 30px;
-	top: 3120px;	
-}
-
-.fondoLanzamiento{
-	background-image: url("../img/fondoLanzamiento.jpg");
-	opacity: 0.5;
-	z-index: -10;
->>>>>>> 2728b480676ea4052def1dacabe60a64d0281531
 }
 
 .mainLazamiento {
@@ -633,55 +619,33 @@ footer .media {
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
 }
 
-<<<<<<< HEAD
 .fondoDemonioHeroe {
 	background-image: url("../img/demonHeroe.jpg");
-=======
-.fondoDemonioHeroe{
-	background-image:url("../img/demonHeroe.jpg");
->>>>>>> 2728b480676ea4052def1dacabe60a64d0281531
 	background-size: cover;
 	background-position: center;
 }
 
-<<<<<<< HEAD
 .fondoAngelHeroe {
 	background-image: url("../img/angelHeroe.jpg");
-=======
-.fondoAngelHeroe{
-	background-image:url("../img/angelHeroe.jpg");
->>>>>>> 2728b480676ea4052def1dacabe60a64d0281531
 	background-size: cover;
 	background-position: center;
 }
 
-<<<<<<< HEAD
 .imgheroe {
-=======
-.heroes ul li img{
->>>>>>> 2728b480676ea4052def1dacabe60a64d0281531
 	background-size: cover;
 	background-position: center;
 	width: 100%;
 	height: 50%;
 }
 
-<<<<<<< HEAD
 .nombreHeroe {
-=======
-.heroes ul li h4{
->>>>>>> 2728b480676ea4052def1dacabe60a64d0281531
 	font-size: 20px;
 	color: rgb(248, 219, 109);
 	-webkit-text-stroke: 0.5px black;
 	margin: 5px 5px 5px 8px;
 }
 
-<<<<<<< HEAD
 .descripcionHeroe {
-=======
-.heroes ul li p{
->>>>>>> 2728b480676ea4052def1dacabe60a64d0281531
 	margin: 5px 5px 5px 8px;
 	font-size: 16px;
 	color: rgb(248, 219, 109);
