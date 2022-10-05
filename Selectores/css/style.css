@@ -225,9 +225,17 @@ footer .media {
 }
 
 .caratula{
-	background-color: #B69723;/*va pasando juego a juego*/
+
 	background-size: cover;
 	width: 100%;
+}
+
+.caratula button {
+	width: 250px;
+	height: 35px;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 h1{
@@ -359,7 +367,6 @@ h1{
 }
 
 .mainLazamiento section {
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
