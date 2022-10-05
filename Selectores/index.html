@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav class="headerLogo">
+        <div class="headerLogo">
             <div>
                 <img src="img/logo.jpg" alt="logo" class="logo">
             </div>
@@ -26,7 +26,7 @@
                 <img src="img/usuario.png" id="btnUsuario" alt="logo" class="iconoHeader">
                 <img src="img/hamburguesaMenu.png" id="btnHamburguesa" lt="logo" class="iconoHeader">
             </div>
-        </nav>
+        </div>
 
         <nav>
             <aside class="menuPerfil desaparecer" id="menuPerfil">
@@ -67,7 +67,7 @@
                     <a href="http://"><h4>Supervivencia</h4></a>
                 </article>
 
-                <article>
+                <article class="media">
                     <a href="#"><img src="img/instagram.png" class="iconoRedes" /></a>
                     <a href="#"><img src="img/facebook.png" class="iconoRedes" /></a>
                     <a href="#"><img src="img/youtube.png" class="iconoRedes" /></a>
@@ -78,8 +78,8 @@
     </header>
 
     <main>
-        <seccion class="caratula">
-            <article class="" id="">
+        <section class="caratula" id= #btnCaratula alt="caratula" >
+            <article class="juegocaratula" id="1">
                 <img src="img/alone in the dark.jpg" />
                 <h3>Alone in de Dark</h3>
                 <h5>Muy Bueno</h5>
@@ -89,7 +89,7 @@
                 <button type="jugar" id="btn_jugar">Jugar</button>
             </article>
 
-            <article class="" id="">
+            <article class="juegocaratula" id="2">
                 <img src="img/abadia.png" />
                 <h3>Abadia</h3>
                 <h5>Muy Bueno</h5>
@@ -99,7 +99,7 @@
                 <button type="jugar" id="btn_jugar">Jugar</button>
             </article>
 
-            <article class="" id="">
+            <article class="juegocaratula" id="3">
                 <img src="img/adventure island.jpg" />
                 <h3>Adventure Island</h3>
                 <h5>Muy Bueno</h5>
@@ -109,7 +109,7 @@
                 <button type="jugar" id="btn_jugar">Jugar</button>
             </article>
 
-            <article class="" id="">
+            <article class="juegocaratula" id="4">
                 <img src="img/anotherworld.jpg" />
                 <h3>Another World</h3>
                 <h5>Genial</h5>
@@ -118,65 +118,56 @@
                 <button type="carrito" id="btn_carrito">carrito</button>
                 <button type="jugar" id="btn_jugar">Jugar</button>
             </article>
-        </seccion>
+        </section>
 
-        <seccion class="carrusel">
-            <articule class= "carmixto">
+        <section class="carruseles">
+            
+            <articule class= "carruselmixtonl">
                 <h1>Nuevos Lanzamientos</h1>
-                <a href="" class="flechaizq"><img src="img/flechaizq.png" /></a>
-                <a href="" class="flechader"><img src="img/flechader.png" /></a>
-
-                <div class="cardoble">
-                    <div class="" id="">
-                        <img src="img/diablo-immortal-destructions-end-cinematic_p8af.1280.webp" />
-                        <h3>Battle of Heaven</h3>
+                <a href="flecha" class="flechaizq"><img src="img/flechaizq.png" /></a>
+                <div class="carddoble" id="1">
+                    <img src="img/diablo-immortal-destructions-end-cinematic_p8af.1280.webp" />
+                    <h3>Battle of Heaven</h3>
+                    <h5>Excelente</h5>
+                    <p><h4>Guerra y estrategia para todos los gustos</h4></p>
+                    <button type="precio" id="btn_precio">230</button>
+                    <button type="carrito" id="btn_carrito">carrito</button>
+                    <button type="jugar" id="btn_jugar">Jugar</button>
+                </div>
+            
+                <div class="cardmixtosimple">
+                    <div class="cardsimple" id="1">
+                        <img src="img/Halo 4 in file.jpg" />
+                        <h3>Halo 4 in Line</h3>
                         <h5>Excelente</h5>
-                        <p>Guerra y estrategia para todos los gustos</p>
-                        <button type="precio" id="btn_precio">230</button>
-                        <button type="carrito" id="btn_carrito">carrito</button>
                         <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
+                
+                    <div class="cardsimple" id="2">
+                        <img src="img/Call of Duty 4.webp" />
+                        <h3>Call of Duty 4</h3>
+                        <h5>Regular</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>   
                 </div>
 
-                <div class="carmixtosimple">
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Halo 4 in file.jpg" />
-                            <h3>Halo 4 in Line</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                <div class="cardmixtosimple">
+                    <div class="cardsimple" id="3">
+                        <img src="img/Alien 8.jpg" />
+                        <h3>Alien 8</h3>
+                        <h5>Malo</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Call of Duty 4.webp" />
-                            <h3>Call of Duty 4</h3>
-                            <h5>Regular</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Alien 8.jpg" />
-                            <h3>Alien 8</h3>
-                            <h5>Malo</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/angeles.jpg" />
-                            <h3>Angeles</h3>
-                            <h5>Regular</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
+                
+                    <div class="cardsimple" id="4">
+                        <img src="img/angeles.jpg" />
+                        <h3>Angeles</h3>
+                        <h5>Regular</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>  
                 </div>
 
-                <div class="cardoble">
+                <div class="carddoble"id="2" >
                     <img src="img/alone in the dark.jpg" />
                     <h3>Alone in de Dark</h3>
                     <h5>Muy Bueno</h5>
@@ -186,42 +177,39 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="carmixtosimple">
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/anotherworld.jpg" />
-                            <h3>Another World</h3>
-                            <h5>Bueno</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                <div class="cardmixtosimple">    
+                    <div class="cardsimple" id="5">
+                        <img src="img/anotherworld.jpg" />
+                        <h3>Another World</h3>
+                        <h5>Bueno</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/barbarian.png" />
-                            <h3>Barbarian</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Bare Knuckle 2.jpg" />
-                            <h3>Bare Knuckle 2</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Batalla_de_Sunaion_HM.webp" />
-                            <h3>Batalla de Sunaion</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="6">
+                        <img src="img/barbarian.png" />
+                        <h3>Barbarian</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
                 </div>
 
-                <div class="cardoble">
+                <div class="cardmixtosimple">
+                    <div class="cardsimple" id="7">
+                        <img src="img/Bare Knuckle 2.jpg" />
+                        <h3>Bare Knuckle 2</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>
+                
+                    <div class="cardsimple" id="8">
+                        <img src="img/Batalla_de_Sunaion_HM.webp" />
+                        <h3>Batalla de Sunaion</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>
+                </div>
+
+                <div class="carddoble" id="3" >
                     <img src="img/abadia.png" />
                     <h3>Abadia</h3>
                     <h5>Muy Bueno</h5>
@@ -232,109 +220,114 @@
                 </div>
 
                 <div class="carmixtosimple">
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Blackwyche2.jpg" />
-                            <h3>Black Wyche II</h3>
-                            <h5>Bueno</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                    <div class="cardsimple" id="9">
+                        <img src="img/Blackwyche2.jpg" />
+                        <h3>Black Wyche II</h3>
+                        <h5>Bueno</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Capitan Comando.webp" />
-                            <h3>Capitan Comando</h3>
-                            <h5>Regular</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="10">
+                        <img src="img/Capitan Comando.webp" />
+                        <h3>Capitan Comando</h3>
+                        <h5>Regular</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Day of the Tentacle.jpg" />
-                            <h3>Day of the Tentacle</h3>
-                            <h5>malo</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                </div> 
+                
+                <div class="carmixtosimple">
+                    <div class="cardsimple" id="11">
+                        <img src="img/Day of the Tentacle.jpg" />
+                        <h3>Day of the Tentacle</h3>
+                        <h5>malo</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Doble Hawk.webp" />
-                            <h3>Double Hawk</h3>
-                            <h5>Regular</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="12">
+                        <img src="img/Doble Hawk.webp" />
+                        <h3>Double Hawk</h3>
+                        <h5>Regular</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
                 </div>
+
+                <div class="carddoble" id="4">
+                    <img src="img/abadia.png" id="4" />
+                    <h3>Abadia</h3>
+                    <h5>Muy Bueno</h5>
+                    <p>Descubre que pasa dentro de la Abadia, muchos sospechosos, un culpable</p>
+                    <button type="precio" id="btn_precio">$250</button>
+                    <button type="carrito" id="btn_carrito">carrito</button>
+                    <button type="jugar" id="btn_jugar">Jugar</button>
+                </div>
+                <a href="flecha" class="flechader"><img src="img/flechaizq.png" class="invertir"/></a>
             </articule>
 
-            <articule class="carsimple">
+            <articule class="carruselsimpletj">
                 <h1>Tus Juegos</h1>
-                <a href="" class="flechaizq"><img src="img/flechaizq.png" /></a>
-                <a href="" class="flechader"><img src="img/flechader.png" /></a>
-
-                <div class="" id="">
+                <a href="flecha" class="flechaizq"><img src="img/flechaizq.png" /></a>
+                <div class="cardsimple" id="14">
                     <img src="img/Halo 4 in file.jpg" />
                     <h3>Halo 4 in Line</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="15">
                     <img src="img/adventure island.jpg" />
                     <h3>Adventure Island</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
 
-                <div class="" id="">
+                <div class="cardsimple" id="16">
                     <img src="img/Alien 8.jpg" />
                     <h3>Alien 8</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
 
-                <div class="" id="">
+                <div class="cardsimple" id="17">
                     <img src="img/Batalla_de_Sunaion_HM.webp" />
                     <h3>Batalla de Sunaion</h3>
                     <h5>malo</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
 
-                <div class="" id="">
+                <div class="cardsimple" id="18">
                     <img src="img/alone in the dark.jpg" />
                     <h3>Alone in the Dark</h3>
                     <h5>Regular</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
 
-                <div class="" id="">
+                <div class="cardsimple" id="19">
                     <img src="img/Knight Lore.jpg" />
                     <h3>Knight Lore</h3>
                     <h5>Bueno</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
 
-                <div class="" id="">
+                <div class="cardsimple" id="20">
                     <img src="img/Grand Theft.webp" />
                     <h3>Grand Theft</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
 
-                <div class="" id="">
+                <div class="cardsimple" id="21">
                     <img src="img/fatal-fury.webp" />
                     <h3>Fatal Fury</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div> 
+                <a href="flecha" class="flechader"><img src="img/flechaizq.png" class="invertir"/></a>
             </article>
 
-            <article clas="cardoble">
+            <article clas="carruseldoblelmc">
                 <h1>Los mas Comprados</h1>
-                <a href="" class="flechaizq"><img src="img/flechaizq.png" /></a>
-                <a href="" class="flechader"><img src="img/flechader.png" /></a>
-
-                <div class="" id="_0">
+                <a href="flecha" class="flechaizq"><img src="img/flechaizq.png" /></a>
+                <div class="carddoble" id="5">
                     <img src="img/adventure island.jpg" />
                     <h3>Adventure Island</h3>
                     <h5>Muy Bueno</h5>
@@ -344,7 +337,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="6">
                     <img src="img/anotherworld.jpg" />
                     <h3>Another World</h3>
                     <h5>Genial</h5>
@@ -354,7 +347,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="7">
                     <img src="img/alone in the dark.jpg" />
                     <h3>Alone in de Dark</h3>
                     <h5>Muy Bueno</h5>
@@ -364,7 +357,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="8">
                     <img src="img/abadia.png" />
                     <h3>Abadia</h3>
                     <h5>Muy Bueno</h5>
@@ -374,7 +367,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="9">
                     <img src="img/turbo.png" />
                     <h3>Turbo</h3>
                     <h5>Bueno</h5>
@@ -384,7 +377,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="10">
                     <img src="img/barbarian.png" />
                     <h3>Barbarian</h3>
                     <h5>Regular</h5>
@@ -394,7 +387,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="11">
                     <img src="img/Street Fighter 2.png" />
                     <h3>Street Figther II</h3>
                     <h5>Excelente</h5>
@@ -404,7 +397,7 @@
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="_0">
+                <div class="carddoble" id="12">
                     <img src="img/tortugas-ninja.webp" />
                     <h3>Tortugas Ninja</h3>
                     <h5>Excelente</h5>
@@ -413,14 +406,13 @@
                     <button type="carrito" id="btn_carrito">carrito</button>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
+                <a href="flecha" class="flechader"><img src="img/flechaizq.png" class="invertir"/></a>
             </article>
 
-            <article class=carmixto>
+            <article class=carruselmixtospv>
                 <h1>Sugeridos para vos</h1>
-                <a href="" class="flechaizq"><img src="img/flechaizq.png" /></a>
-                <a href="#" class="flechader"><img src="img/flechader.png" /></a>
-
-                <div class="cardoble">
+                <a href="flecha" class="flechaizq"><img src="img/flechaizq.png" /></a>
+                <div class="carddoble" id="13">
                     <img src="img/tortugas-ninja.webp" />
                     <h3>Tortugas Ninja</h3>
                     <h5>Excelente</h5>
@@ -431,41 +423,38 @@
                 </div>
 
                 <div class="carmixtosimple">
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Shadow Beast 2.jpg" />
-                            <h3>Swadow Beast II</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                    <div class="cardsimple" id="22">
+                        <img src="img/Shadow Beast 2.jpg" />
+                        <h3>Swadow Beast II</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Gunfright.jpg" />
-                            <h3>Gun Frigth</h3>
-                            <h5>Bueno</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="23">
+                        <img src="img/Gunfright.jpg" />
+                        <h3>Gun Frigth</h3>
+                        <h5>Bueno</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/gradius.jpg" />
-                            <h3>Gradius</h3>
-                            <h5>Bueno</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                </div>
+                
+                <div class="carmixtosimple">
+                    <div class="cardsimple" id="24">
+                        <img src="img/gradius.jpg" />
+                        <h3>Gradius</h3>
+                        <h5>Bueno</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Pentagram.jpg" />
-                            <h3>Pentagram</h3>
-                            <h5>Regular</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="25">
+                        <img src="img/Pentagram.jpg" />
+                        <h3>Pentagram</h3>
+                        <h5>Regular</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
                 </div>
 
-                <div class="cardoble">
+                <div class="carddoble" id="14" >
                     <img src="img/Street Fighter 2.png" />
                     <h3>Street Figther II</h3>
                     <h5>Excelente</h5>
@@ -476,41 +465,38 @@
                 </div>
 
                 <div class="carmixtosimple">
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/doom.gif" />
-                            <h3>Doom</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                    <div class="cardsimple" id="26">
+                        <img src="img/doom.gif" />
+                        <h3>Doom</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/larry.jpg" />
-                            <h3>Larry</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/dragon-ball-z.webp" />
-                            <h3>Dragon Ball Z</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Lunar Jetman.jpg" />
-                            <h3>Lunar Jetman</h3>
-                            <h5>Bueno</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="27">
+                        <img src="img/larry.jpg" />
+                        <h3>Larry</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
                 </div>
 
-                <div class="cardoble">
+                <div class="carmixtosimple">
+                    <div class="cardsimple" id="28">
+                        <img src="img/dragon-ball-z.webp" />
+                        <h3>Dragon Ball Z</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>
+                
+                    <div class="cardsimple" id="29">
+                        <img src="img/Lunar Jetman.jpg" />
+                        <h3>Lunar Jetman</h3>
+                        <h5>Bueno</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>
+                </div>
+
+                <div class="carddoble" id="15">
                     <img src="img/turbo.png" />
                     <h3>Turbo</h3>
                     <h5>Bueno</h5>
@@ -521,103 +507,100 @@
                 </div>
 
                 <div class="carmixtosimple">
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/lorna.jpg" />
-                            <h3>Lorna</h3>
-                            <h5>Regular</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                    <div class="cardsimple" id="30">
+                        <img src="img/lorna.jpg" />
+                        <h3>Lorna</h3>
+                        <h5>Regular</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/Final Fantasy X.webp" />
-                            <h3>Final Fantasy X</h3>
-                            <h5>malo</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/freddy.png" />
-                            <h3>Freddy</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
-                    </div>
-                    <div class="carsimple">
-                        <div class="" id="">
-                            <img src="img/hellfire.jpg" />
-                            <h3>Hell Fire</h3>
-                            <h5>Excelente</h5>
-                            <button type="jugar" id="btn_jugar">Jugar</button>
-                        </div>
+                
+                    <div class="cardsimple" id="31">
+                        <img src="img/Final Fantasy X.webp" />
+                        <h3>Final Fantasy X</h3>
+                        <h5>malo</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
                     </div>
                 </div>
+
+                <div class="carmixtosimple">
+                    <div class="cardsimple" id="32">
+                        <img src="img/freddy.png" />
+                        <h3>Freddy</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>
+                
+                    <div class="cardsimple" id="33">
+                        <img src="img/hellfire.jpg" />
+                        <h3>Hell Fire</h3>
+                        <h5>Excelente</h5>
+                        <button type="jugar" id="btn_jugar">Jugar</button>
+                    </div>
+                </div>
+                <a href="flecha" class="flechader"><img src="img/flechaizq.png" class="invertir"/></a>
             </article>
 
-            <article class=carsimple>
+            <article class=carruselsimplec>
                 <h1>Clasicos</h1>
-                <a href="" class="flechaizq"><img src="img/flechaizq.png" /></a>
-                <a href="#" class="flechader"><img src="img/flechader.png" /></a>
-
-                <div class="" id="">
+                <a href="flecha" class="flechaizq"><img src="img/flechaizq.png" /></a>
+                <div class="cardsimple" id="34">
                     <img src="img/doom.gif" />
                     <h3>Doom</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="35">
                     <img src="img/Street Fighter 2.png" />
                     <h3>Street Fighter 2</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="36">
                     <img src="img/Batalla_de_Sunaion_HM.webp" />
                     <h3>Batalla de Sunaion</h3>
                     <h5>Bueno</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="37">
                     <img src="img/Halo 4 in file.jpg" />
                     <h3>Halo 4 in Line</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="38">
                     <img src="img/Imhotep.jpg" />
                     <h3>Imhotep</h3>
                     <h5>Regular</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="39">
                     <img src="img/dragon-ball-z.webp" />
                     <h3>Dragon Ball Z</h3>
                     <h5>Bueno</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="40">
                     <img src="img/adventure island.jpg" />
                     <h3>Adventure Island</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
 
-                <div class="" id="">
+                <div class="cardsimple" id="41">
                     <img src="img/gameover.png" />
                     <h3>Game Over</h3>
                     <h5>Excelente</h5>
                     <button type="jugar" id="btn_jugar">Jugar</button>
                 </div>
+                <a href="flecha" class="flechader"><img src="img/flechaizq.png" class="invertir"/></a>
             </article>
-        </seccion>
+        </section>
     </main>
 
     <footer>
@@ -667,7 +650,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article class="media">
                 <a href="#"><img src="img/instagram.png" class="iconoRedes" /></a>
                 <a href="#"><img src="img/facebook.png" class="iconoRedes" /></a>
                 <a href="#"><img src="img/youtube.png" class="iconoRedes" /></a>
