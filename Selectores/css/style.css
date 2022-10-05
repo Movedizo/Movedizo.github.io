@@ -294,46 +294,53 @@ footer .media {
 	color: #160f11;
 }
 
-.carruselmixtonl{
-	height: 600px;
-	width: 90%;
-	left: 5%;
-	top: 840px;
+.carruselmixtonl, .carruselmixtospv{
 	display: flex;
 	justify-content: center;
-	align-items: center;	
+	align-items: center;
+}
+
+.carruselsimplec, .carruselsimpletj{
+	
+}
+
+.carruselmixtonl{
+	height: 600px;
+	width: 1360px;
+	left: 30px;
+	top: 840px;		
 }
 
 .carruselsimpletj{
-	position: relative;
 	height: 360px;
-	width: 90%;
-	left: 5%;
-	top: 1460px;
+	width: 1360px;
+	left: 30px;
+	top: 1470px;
+	
 }
 
 .carruseldoblelmc{
-	position: relative;
 	height: 600px;
-	width: 90%;
-	left: 5%;
-	top: 1810px;	
+	width: 1360px;
+	left: 30px;
+	top: 1860px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .carruselmixtospv{
-	position: relative;
 	height: 600px;
-	width: 90%;
-	left: 5%;
-	top: 840px;	
+	width: 1360px;
+	left: 30px;
+	top: 2490px;
 }
 
 .carruselsimplec{
-	position: relative;
 	height: 360px;
-	width: 90%;
-	left: 5%;
-	top: 1460px;
+	width: 1360px;
+	left: 30px;
+	top: 3120px;	
 }
 
 .fondoLanzamiento{
