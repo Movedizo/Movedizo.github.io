@@ -268,14 +268,18 @@ footer media {
 	}
 
 }
-.fondoLanzamiento{
-	/*background-image: url("../img/fondoLanzamiento.jpg");
->>>>>>> cf1f00fd47d516f28b93a03b730080718e50564e
+
+.fondoLanzamiento {
 	opacity: 0.5;
-	z-index: -10;*/
+	z-index: -10;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: initial;
 }
 
 .mainLazamiento {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -289,6 +293,7 @@ footer media {
 }
 
 .mainLazamiento section {
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -326,14 +331,17 @@ footer media {
 	background-image: url("../img/anuncioHeader4.jpg");
 	background-size: cover;
 	width: 100%;
+	/*z-index: -2; me rompre la trancision de los botones*/
+	position: relative;
 }
 
 .fondoNegro {
 	width: 100%;
 	height: 100%;
-	position: absolute;
 	background-color: black;
-	opacity: 0.5;
+	background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+	z-index: -1;
+	position: absolute;
 }
 
 .mainLazamiento button {
@@ -415,73 +423,97 @@ footer media {
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
 }
 
-.mainLazamiento .caracteristicas ul {
+.caracteristicas .fondoNegro {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	z-index: -5;
+}
+
+.caracteristicas ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.mainLazamiento .caracteristicas li {
+.caracteristicas li {
 	margin: 20px;
 }
 
-.mainLazamiento .caracteristicas li div {
+.caracteristicas li div {
 	display: flex;
-	width: 300px;
-	height: 300px;
 	align-items: flex-end;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
 }
 
-.mainLazamiento .caracteristicas li div :hover {
+.caracteristicas li :hover {
 	/*Como evito que el hover pase a los hijos y arreglar 
 													 que es mas ancho de lo que deberia*/
 	border: solid 3px rgb(248, 219, 109);
 	color: #fff;
 }
 
-.mainLazamiento .caracteristicas .imgCaracteristica1 {
+.caracteristicas li div :hover {
+	/*Como evito que el hover pase a los hijos y arreglar 
+													 que es mas ancho de lo que deberia*/
+	border: solid 0px rgb(248, 219, 109);
+	color: #fff;
+}
+
+.caracteristicas .imgCaracteristica1 {
 	background-image: url("../img/Caracteristicas1.jpg");
 	background-size: cover;
-}
-
-.mainLazamiento .caracteristicas .imgCaracteristica2 {
-	background-image: url("../img/ejercitoangel.webp");
-	background-size: cover;
-	background-position: center;
-}
-
-.mainLazamiento .caracteristicas .imgCaracteristica3 {
-	background-image: url("../img/Caracteristicas3.jpg");
-	background-size: cover;
-	background-position: center;
-}
-
-.mainLazamiento .caracteristicas .imgCaracteristica4 {
-	background-image: url("../img/Caracteristicas4.jpg");
-	background-position: center;
-	background-size: cover;
-}
-
-.mainLazamiento .caracteristicas .imgCaracteristica5 {
-	background-image: url("../img/Caracteristicas5.jpg");
-	background-size: cover;
-	background-position: center;
-}
-
-.mainLazamiento .caracteristicas .imgCaracteristica6 {
-	background-image: url("../img/Caracteristicas6.jpg");
-	background-size: cover;
-	background-position: center;
-}
-
-.mainLazamiento .caracteristicas li div img {
-	position: absolute;
 	width: 300px;
 	height: 300px;
 }
 
-.mainLazamiento .caracteristicas li div h4 {
+.caracteristicas .imgCaracteristica2 {
+	background-image: url("../img/ejercitoangel.webp");
+	background-size: cover;
+	background-position: center;
+	width: 300px;
+	height: 300px;
+}
+
+.caracteristicas .imgCaracteristica3 {
+	background-image: url("../img/Caracteristicas3.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 300px;
+	height: 300px;
+}
+
+.caracteristicas .imgCaracteristica4 {
+	background-image: url("../img/Caracteristicas4.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+}
+
+.caracteristicas .imgCaracteristica5 {
+	background-image: url("../img/Caracteristicas5.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 300px;
+	height: 300px;
+}
+
+.caracteristicas .imgCaracteristica6 {
+	background-image: url("../img/Caracteristicas6.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 300px;
+	height: 300px;
+}
+
+.caracteristicas li div img {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	width: 300px;
+	height: 300px;
+}
+
+.caracteristicas li div h4 {
 	color: rgb(248, 219, 109);
 	font-size: 25px;
 	-webkit-text-stroke: 0.5px black;
@@ -502,42 +534,51 @@ footer media {
 	text-align: left;
 	/*Como separa los parrafos*/
 }
-
-.heroes ul {
+.slider-container {
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	width: 800px;
+	height: 350px;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
 }
 
-.heroes ul li {
-	margin: 15px;
+.slider-container li {
+	flex: 0 0 250px;
 	width: 250px;
 	height: 300px;
+	object-fit: cover;
+	scroll-snap-align: center;
+	margin: 15px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
 }
-.fondoDemonioHeroe{
-	background-image:url("../img/demonHeroe.jpg");
+
+.fondoDemonioHeroe {
+	background-image: url("../img/demonHeroe.jpg");
 	background-size: cover;
 	background-position: center;
 }
-.fondoAngelHeroe{
-	background-image:url("../img/angelHeroe.jpg");
+
+.fondoAngelHeroe {
+	background-image: url("../img/angelHeroe.jpg");
 	background-size: cover;
 	background-position: center;
 }
-.heroes ul li img{
+
+.imgheroe {
 	background-size: cover;
 	background-position: center;
 	width: 100%;
 	height: 50%;
 }
-.heroes ul li h4{
+
+.nombreHeroe {
 	font-size: 20px;
 	color: rgb(248, 219, 109);
 	-webkit-text-stroke: 0.5px black;
 	margin: 5px 5px 5px 8px;
 }
-.heroes ul li p{
+
+.descripcionHeroe {
 	margin: 5px 5px 5px 8px;
 	font-size: 16px;
 	color: rgb(248, 219, 109);
