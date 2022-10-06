@@ -276,6 +276,33 @@ h1{
 	color:black
 }
 
+.probando{
+	width: 290px;
+	height: 340px;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.probando button{
+	position: absolute;
+	top: 36%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.probando button{
+	cursor: pointer;
+	width: 130px;
+	height: 45px;
+	font-style: normal;
+	font-size: 26px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 10px;
+	background-color: #88AC21;
+}
+
 .carddoble div{
 	width: 290px;
 	height: 490px;
@@ -283,6 +310,31 @@ h1{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+}
+
+.cardsimple div{
+	width: 290px;
+	height: 340px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.probando{
+	width: 290px;
+	height: 340px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.probando :hover{
+	background-color: #F8F26D;
+	transform: scale(1.10);	
+	transition: all 200ms ease;
+	margin: 20px;
 }
 
 .carddoble div:hover{
@@ -297,15 +349,6 @@ h1{
 	transform: scale(1.10);	
 	transition: all 200ms ease;
 	margin: 20px;
-}
-
-.carsimple div{
-	width: 290px;
-	height: 490px;
-	border-radius: 20px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .carddoble a{
@@ -350,7 +393,7 @@ a.botoncarddoble:hover::before {
     top: 0;
 }
 
-.carddoble img, .cardsimple img{
+.carddoble img, .cardsimple img, .probando img{
 	object-fit: cover;
 	width: 250px;
 	height: 200px;
@@ -358,7 +401,7 @@ a.botoncarddoble:hover::before {
 	margin: 20px;
 }
 
-.carddoble h3, .cardsimple h3{
+.carddoble h3, .cardsimple h3, .probando h3 {
 	width: 230px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -367,7 +410,7 @@ a.botoncarddoble:hover::before {
 	color:black;
 }
 
-.carddoble h4, .cardsimple h4{
+.carddoble h4, .cardsimple h4 {
 	width: 230px;
 	height: 45px;
 	overflow: hidden;
@@ -376,12 +419,11 @@ a.botoncarddoble:hover::before {
 	color:black;
 }
 
-.carddoble h5, .cardsimple h5{
+.carddoble h5, .cardsimple h5, .probando h5{
 	width: 230px;
 	font-size: 16px;
 	color: black;
 }
-
 
 .slider-containerNL, .slider-containerLMC, .slider-containerSPV {
 	display: flex;
@@ -397,7 +439,7 @@ a.botoncarddoble:hover::before {
 .slider-containerTJ, .slider-containerC {
 	display: flex;
 	width: 1450px;
-	height: 250px;
+	height: 450px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	margin-left: 20px;
@@ -406,13 +448,7 @@ a.botoncarddoble:hover::before {
 .slider-containerC{
 	margin-bottom: 70px;
 }
-.carruselsimplec{
-	position: relative;
-	height: 360px;
-	width: 90%;
-	left: 5%;
-	top: 1460px;
-}
+
 .fondoLanzamiento {
 	opacity: 0.5;
 	z-index: -10;
