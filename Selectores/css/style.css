@@ -24,7 +24,7 @@ header nav {
 
 .logo {
 	border-radius: 100%;
-	Width: 104px;
+	Width: 90px;
 	Height: 90px;
 	margin: 10px;
 	Top: 15px;
@@ -254,57 +254,10 @@ footer .media {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-	}
-	.cardF{
-		width: 280px;
-		height: 380px;
-		display: flex;
-		flex-direction: column;
-		justify-content:center;
-		align-items: flex-start;
-		padding: 20px;
-		margin: 50px;
 	}	
-	.cardF div{
-		display: flex;
-		justify-content:center;
-		align-items: center;
-		width: 100%;
-		height: 40%;
-	}
-	.cardF img{
-		border-radius: 10px;
-		width: 80%;
-		height: 100%;
-	}
-	.cardF h3{
-		font-size: 30px;
-		margin: 5px;
-	}
-	.cardF h5{
-		margin: 5px;
-	}
-	.cardF p{
-		margin: 5px;
-	}
-	.cardF button{
-		font-weight: bold;
-		color: #fff;
-		font-size: 18px;
-		border-radius: 15px;
-		background-color: #88AC21;
-		margin: 5px;
-		width: 50%;
-		height: 30px;
-	}
-	.cardFHover{
-		border-radius: 15px;
-background-color: #F8F26D;
-	}
 }
 
 .caratula{
-
 	background-size: cover;
 	width: 100%;
 }
@@ -323,50 +276,101 @@ h1{
 	color:black
 }
 
-.cardsimple {
-	background-size: cover;
-	background-position: center;
-	z-index: -10;
-}
-
-.carddoble {
-	background-size: cover;
-	background-position: center;
-	z-index: -10;
-}
-
-.carddoble h4, .cardsimple h4{
-	font-size: 22px;
-	margin: 15px 20px 15px 20px;
-	color:black;
-}
-
-.carddoble h3, .cardsimple h3 {
-	font-size: 32px;
-	margin: 3px 20px 15px 20px;
-	color:black
-}
-
-.carddoble h5, .cardsimple h5{
-	font-size: 16px;
-	margin: 10px 20px 15px 20px;
-	color: black;
-}
-
-.cardsimple{
-	width: 290px;
-	height: 235px;
-	border-radius: 20px;
-	justify-content: center;
-	align-items: center;
-	z-index: -5;
-}
-
-.carddoble{
+.carddoble div{
 	width: 290px;
 	height: 490px;
 	border-radius: 20px;
-	z-index: -5;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.carddoble div:hover{
+	background-color: #F8F26D;
+	transform: scale(1.10);	
+	transition: all 200ms ease;
+}
+
+.carddoble a{
+	cursor: pointer;
+	width: 250px;
+	height: 45px;
+	font-size: 26px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 15px;
+	background-color: #88AC21;
+	display: inline-block;	
+	overflow: hidden;
+	position: relative;
+	padding: 0 6px;
+}
+
+.carddoble a::after,.carddoble a::before {
+	content: '';
+	display: block;
+	position: absolute;
+	transition: width 540ms, opacity 300ms ease;
+}
+
+a.btn.test-completed::after,
+a.btn.test-completed::before {
+    content: "$350";
+	position: absolute;
+	text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.8;
+    transition: all 200ms;
+    top: 0;
+}
+
+a.btn.btn.test-completed:hover::after{
+	top: -40px;
+}
+
+a.btn.test-completed::before {
+    content: "carrito";
+	top: 40px;
+}
+
+a.btn.btn.test-completed:hover::before {
+    top: 0;
+}
+
+.carddoble img, .cardsimple img{
+	object-fit: cover;
+	width: 250px;
+	height: 200px;
+	border-radius: 15px;
+	margin: 20px;
+}
+
+.carddoble h3, .cardsimple h3{
+	width: 230px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 32px;
+	color:black;
+}
+
+.carddoble h4, .cardsimple h4{
+	width: 230px;
+	height: 45px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 20px;
+	color:black;
+}
+
+.carddoble h5, .cardsimple h5{
+	width: 230px;
+	font-size: 16px;
+	color: black;
 }
 
 .carmixtosimple{
@@ -376,20 +380,14 @@ h1{
 	z-index: -5;	
 }
 
-.carddoble img, .cardsimple img{
-	object-fit: cover;
-	width: 250px;
-	height: 200px;
-	margin: 20px;
+.cardsimple{
+	width: 290px;
+	height: 235px;
+	border-radius: 20px;
+	background-color: #F8F26D;
 	border-radius: 15px;
-}
-
-.carddoble button {
-	width: 250px;
-	height: 35px;
-	border-radius: 15px;
-	font-size: 20px;
-	font-weight: bold;
+	background-size: cover;
+	background-position: center;		
 }
 
 .cardsimple button {
