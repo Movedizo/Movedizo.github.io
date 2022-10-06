@@ -280,7 +280,6 @@ h1{
 	width: 290px;
 	height: 490px;
 	border-radius: 20px;
-	border-radius: 15px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -290,12 +289,30 @@ h1{
 	background-color: #F8F26D;
 	transform: scale(1.10);	
 	transition: all 200ms ease;
+	margin: 20px;
+}
+
+.cardsimple div:hover{
+	background-color: #F8F26D;
+	transform: scale(1.10);	
+	transition: all 200ms ease;
+	margin: 20px;
+}
+
+.carsimple div{
+	width: 290px;
+	height: 490px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .carddoble a{
 	cursor: pointer;
 	width: 250px;
 	height: 45px;
+	font-style: normal;
 	font-size: 26px;
 	font-weight: bold;
 	color: #fff;
@@ -304,19 +321,11 @@ h1{
 	display: inline-block;	
 	overflow: hidden;
 	position: relative;
-	padding: 0 6px;
 }
 
-.carddoble a::after,.carddoble a::before {
-	content: '';
-	display: block;
-	position: absolute;
-	transition: width 540ms, opacity 300ms ease;
-}
-
-a.btn.test-completed::after,
-a.btn.test-completed::before {
-    content: "$350";
+a.botoncarddoble::after,
+a.botoncarddoble::before {
+    content: "$275";
 	position: absolute;
 	text-align: center;
     width: 100%;
@@ -328,16 +337,16 @@ a.btn.test-completed::before {
     top: 0;
 }
 
-a.btn.btn.test-completed:hover::after{
+a.botoncarddoble:hover::after{
 	top: -40px;
 }
 
-a.btn.test-completed::before {
+a.botoncarddoble::before {
     content: "carrito";
 	top: 40px;
 }
 
-a.btn.btn.test-completed:hover::before {
+a.botoncarddoble:hover::before {
     top: 0;
 }
 
@@ -373,38 +382,16 @@ a.btn.btn.test-completed:hover::before {
 	color: black;
 }
 
-.carmixtosimple{
-	width: 290px;
-	height: 490px;
-	border-radius: 20px;
-	z-index: -5;	
-}
-
-.cardsimple{
-	width: 290px;
-	height: 235px;
-	border-radius: 20px;
-	background-color: #F8F26D;
-	border-radius: 15px;
-	background-size: cover;
-	background-position: center;		
-}
-
-.cardsimple button {
-	width: 150px;
-	height: 35px;
-	border-radius: 15px;
-	font-size: 20px;
-	font-weight: bold;
-}
 
 .slider-containerNL, .slider-containerLMC, .slider-containerSPV {
 	display: flex;
+	align-items: center;
 	width: 1450px;
-	height: 500px;
+	height: 580px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	margin-left: 20px;
+	z-index: -1;
 }
 
 .slider-containerTJ, .slider-containerC {
