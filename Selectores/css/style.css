@@ -354,13 +354,6 @@ h1 {
 	margin: 20px;
 }
 
-.cardsimple div:hover{
-	background-color: #F8F26D;
-	transform: scale(1.10);	
-	transition: all 200ms ease;
-	margin: 20px;
-}
-
 .carddoble a {
 	cursor: pointer;
 	width: 250px;
@@ -412,8 +405,7 @@ a.botoncarddoble:hover::before {
 	margin: 20px;
 }
 
-.carddoble h3,
-.cardsimple h3, .card h3{
+.carddoble h3, .card h3{
 	width: 230px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -422,8 +414,7 @@ a.botoncarddoble:hover::before {
 	color: black;
 }
 
-.carddoble h4,
-.cardsimple h4 {
+.carddoble h4 {
 	width: 230px;
 	height: 45px;
 	overflow: hidden;
@@ -432,7 +423,7 @@ a.botoncarddoble:hover::before {
 	color: black;
 }
 
-.carddoble h5, .cardsimple h5, .card h5{
+.carddoble h5, .card h5{
 	width: 230px;
 	font-size: 16px;
 	color: black;
@@ -442,18 +433,18 @@ a.botoncarddoble:hover::before {
 	display: flex;
 	align-items: center;
 	width: 1450px;
-	height: 580px;
+	height: 560px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	margin-left: 20px;
-	z-index: -1;
 }
 
 .slider-containerTJ,
 .slider-containerC {
 	display: flex;
+	align-items: center;
 	width: 1450px;
-	height: 450px;
+	height: 300px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	margin-left: 20px;
@@ -483,7 +474,8 @@ a.botoncarddoble:hover::before {
 	color: #B69723;
 	-webkit-text-stroke: 0.5px black;
 	font-size: 40px;
-	margin: 20px;
+	margin-top: 40px;
+	margin-bottom: 30;
 }
 
 .mainLazamiento section {
@@ -504,7 +496,8 @@ a.botoncarddoble:hover::before {
 }
 
 .mainLazamiento article div {
-	padding: 35px;
+	padding-left: 35px;
+	padding-right: 35px;
 	font-size: 30px;
 	max-width: 800px;
 }
@@ -879,11 +872,13 @@ a.botoncarddoble:hover::before {
 	margin: 20px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
 }
+
 .historiaHalo{
 	background-color: #F8F26D;
 	padding: 20px;
 	border-radius: 15px;
 }
+
 .historiaHalo p {
 	font-size: 18px;
 	margin-top: 10px;
@@ -896,10 +891,12 @@ a.botoncarddoble:hover::before {
 	background-color: #F8F26D;
 	padding: 20px;
 }
+
 .comentar textarea{
 	width: 80%;
 	height: 100px;
 }
+
 .comentarEnviar{
 	display: flex;
 	flex-direction: column;
