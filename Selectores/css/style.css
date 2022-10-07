@@ -199,38 +199,26 @@ footer .media {
 	}
 
 	.busqueda {
+		width: 500px;
+		height: 40px;
+		background-color: #FFFA95;
+		border-radius: 20px;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+  		justify-content: space-between;
+		align-items: center
 	}
 
 	.busqueda input {
-		min-width: 500px;
-		min-height: 30px;
-		background-color: #FFFA95;
-		border-top-left-radius: 20px;
-		border-bottom-left-radius: 20px;
-		padding: 5px;
-		padding-left: 10px;
+		background-color: #FFFA95;	
+		font-size: 20px;
+		margin-left: 20px;
 	}
 
 	.busqueda img {
-		width: 20px;
-		height: 20px;
-	}
-
-	.busqueda a {
-		display: flex;
-		align-items: center;
-		width: 20px;
-		min-height: 30px;
-		background-color: #FFFA95;
-		border-bottom-right-radius: 20px;
-		border-top-right-radius: 20px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		padding-right: 10px;
-		padding-left: 10px;
+		width: 25px;
+		height: 25px;
+		margin-right: 20px;
+		margin-top: 4px;
 	}
 
 	footer section {
@@ -260,11 +248,6 @@ footer .media {
 		flex-direction: row;
 		align-items: center;
 	}
-}
-
-.caratula {
-	background-size: cover;
-	width: 100%;
 }
 
 .caratula button {
