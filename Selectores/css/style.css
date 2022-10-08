@@ -975,9 +975,11 @@ a.botoncarddoble:hover::before {
 .cajaComentarios .contComentarios {
 	width: 90%;
 }
+
 .otro{
 	width: 90%;
 }
+
 .contComentarios ul{
 	display: flex;
 	align-items: center;
