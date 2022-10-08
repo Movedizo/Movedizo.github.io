@@ -57,7 +57,8 @@ header nav {
 	border-radius: 20px;
 	display: flex;
 	justify-items: flex-end;
-	align-items: center
+	align-items: center;
+	display: none;
 }
 
 .busqueda input {
