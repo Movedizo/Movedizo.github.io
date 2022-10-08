@@ -7,7 +7,7 @@
 	border: none;
 	outline: none;
 	box-sizing: border-box;
-}
+}	
 
 a {
 	color: rgb(0, 0, 0);
@@ -43,16 +43,31 @@ header nav {
 	background-color: rgb(248, 242, 109);
 }
 
-.busqueda {
-	display: flex;
-	display: none;
-}
-
 .iconoHeader {
 	border-radius: 100%;
 	margin: 5px;
 	Width: 45px;
 	Height: 45px;
+}
+
+.busqueda {
+	width: 220px;
+	height: 40px;
+	background-color: #FFFA95;
+	border-radius: 20px;
+	display: flex;
+	justify-items: flex-end;
+	align-items: center
+}
+
+.busqueda input {
+	background-color: #FFFA95;	
+	margin-left: 20px;
+}
+
+.busqueda img {
+	width: 25px;
+	height: 25px;
 }
 
 .menuPerfil {
@@ -200,38 +215,26 @@ footer .media {
 	}
 
 	.busqueda {
+		width: 500px;
+		height: 40px;
+		background-color: #FFFA95;
+		border-radius: 20px;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+  		justify-content: space-between;
+		align-items: center
 	}
 
 	.busqueda input {
-		min-width: 500px;
-		min-height: 30px;
-		background-color: #FFFA95;
-		border-top-left-radius: 20px;
-		border-bottom-left-radius: 20px;
-		padding: 5px;
-		padding-left: 10px;
+		background-color: #FFFA95;	
+		font-size: 20px;
+		margin-left: 20px;
 	}
 
 	.busqueda img {
-		width: 20px;
-		height: 20px;
-	}
-
-	.busqueda a {
-		display: flex;
-		align-items: center;
-		width: 20px;
-		min-height: 30px;
-		background-color: #FFFA95;
-		border-bottom-right-radius: 20px;
-		border-top-right-radius: 20px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		padding-right: 10px;
-		padding-left: 10px;
+		width: 25px;
+		height: 25px;
+		margin-right: 20px;
+		margin-top: 4px;
 	}
 
 	footer section {
@@ -263,22 +266,17 @@ footer .media {
 	}
 }
 
-.caratula {
-	background-size: cover;
-	width: 100%;
-}
-
 .caratula button {
 	width: 250px;
 	height: 35px;
 	border-radius: 15px;
-	font-size: 20px;
+	font-size: 28px;
 	font-weight: bold;
 }
 
 h1 {
 	font-size: 40px;
-	margin: 60px 10px 10px 20px;
+	margin: 60px 10px 10px 40px;
 	color: black
 }
 
@@ -307,7 +305,7 @@ h1 {
 
 .carsimple div {
 	width: 290px;
-	height: 490px;
+	height: 240px;
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
@@ -399,18 +397,18 @@ a.botoncarddoble:hover::before {
 	display: flex;
 	align-items: center;
 	width: 1450px;
-	height: 580px;
+	height: 560px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	margin-left: 20px;
-	z-index: -1;
 }
 
 .slider-containerTJ,
-.slider-containerC {
+.slider-containerC{
 	display: flex;
+	align-items: center;
 	width: 1450px;
-	height: 450px;
+	height: 300px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	margin-left: 20px;
@@ -448,7 +446,8 @@ a.botoncarddoble:hover::before {
 	color: #B69723;
 	-webkit-text-stroke: 0.5px black;
 	font-size: 40px;
-	margin: 20px;
+	margin-top: 40px;
+	margin-bottom: 30;
 }
 
 .mainLazamiento section {
@@ -469,7 +468,8 @@ a.botoncarddoble:hover::before {
 }
 
 .mainLazamiento article div {
-	padding: 35px;
+	padding-left: 35px;
+	padding-right: 35px;
 	font-size: 30px;
 	max-width: 800px;
 }
@@ -844,53 +844,32 @@ a.botoncarddoble:hover::before {
 	margin: 20px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
 }
-
-.historiaHalo {
+.historiaHalo{
 	background-color: #F8F26D;
 	padding: 20px;
 	border-radius: 15px;
 }
-
 .historiaHalo p {
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
-.CajaComentario {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-.contenTituloComentario {
-	width: 90%;
-}
-
-.comentar {
+.comentar{
+	width: 80%;
 	font-size: 32px;
 	height: 250px;
 	background-color: #F8F26D;
 	padding: 20px;
 	border-radius: 15px;
 }
-
-.comentar .comentarUser {
-	display: flex;
-	align-items: flex-end;
-	flex-direction: row;
-	margin: 5px;
-}
-
-.comentar textarea {
-	width: 90%;
+.comentar textarea{
+	width: 80%;
 	height: 100px;
 	border-radius: 8px;
 	margin-bottom: 10px;
 	padding: 5px;
 }
-
-.comentarEnviar {
+.comentarEnviar{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
