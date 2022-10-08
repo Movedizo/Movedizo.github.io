@@ -1,4 +1,5 @@
 * {
+	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -281,38 +282,7 @@ h1 {
 	color: black
 }
 
-<<<<<<< HEAD
 .carddoble div {
-=======
-.probando{
-	width: 290px;
-	height: 340px;
-	border-radius: 20px;
-	overflow: hidden;
-	position: relative;
-}
-
-.probando button{
-	position: absolute;
-	top: 36%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.probando button{
-	cursor: pointer;
-	width: 130px;
-	height: 45px;
-	font-style: normal;
-	font-size: 26px;
-	font-weight: bold;
-	color: #fff;
-	border-radius: 10px;
-	background-color: #88AC21;
-}
-
-.carddoble div{
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	width: 290px;
 	height: 490px;
 	border-radius: 20px;
@@ -321,47 +291,20 @@ h1 {
 	flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
 .carddoble div:hover {
-=======
-.cardsimple div{
-	width: 290px;
-	height: 340px;
-	border-radius: 20px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.probando{
-	width: 290px;
-	height: 340px;
-	border-radius: 20px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.probando :hover{
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	background-color: #F8F26D;
 	transform: scale(1.10);
 	transition: all 200ms ease;
 	margin: 20px;
 }
 
-<<<<<<< HEAD
 .cardsimple div:hover {
-=======
-.carddoble div:hover{
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	background-color: #F8F26D;
 	transform: scale(1.10);
 	transition: all 200ms ease;
 	margin: 20px;
 }
 
-<<<<<<< HEAD
 .carsimple div {
 	width: 290px;
 	height: 490px;
@@ -369,13 +312,6 @@ h1 {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-=======
-.cardsimple div:hover{
-	background-color: #F8F26D;
-	transform: scale(1.10);	
-	transition: all 200ms ease;
-	margin: 20px;
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 }
 
 .carddoble a {
@@ -420,12 +356,8 @@ a.botoncarddoble:hover::before {
 	top: 0;
 }
 
-<<<<<<< HEAD
 .carddoble img,
 .cardsimple img {
-=======
-.carddoble img, .cardsimple img, .probando img{
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	object-fit: cover;
 	width: 250px;
 	height: 200px;
@@ -433,12 +365,8 @@ a.botoncarddoble:hover::before {
 	margin: 20px;
 }
 
-<<<<<<< HEAD
 .carddoble h3,
 .cardsimple h3 {
-=======
-.carddoble h3, .cardsimple h3, .probando h3 {
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	width: 230px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -447,12 +375,8 @@ a.botoncarddoble:hover::before {
 	color: black;
 }
 
-<<<<<<< HEAD
 .carddoble h4,
 .cardsimple h4 {
-=======
-.carddoble h4, .cardsimple h4 {
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	width: 230px;
 	height: 45px;
 	overflow: hidden;
@@ -461,25 +385,17 @@ a.botoncarddoble:hover::before {
 	color: black;
 }
 
-<<<<<<< HEAD
 .carddoble h5,
 .cardsimple h5 {
-=======
-.carddoble h5, .cardsimple h5, .probando h5{
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	width: 230px;
 	font-size: 16px;
 	color: black;
 }
 
-<<<<<<< HEAD
 
 .slider-containerNL,
 .slider-containerLMC,
 .slider-containerSPV {
-=======
-.slider-containerNL, .slider-containerLMC, .slider-containerSPV {
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 	display: flex;
 	align-items: center;
 	width: 1450px;
@@ -504,7 +420,6 @@ a.botoncarddoble:hover::before {
 	margin-bottom: 70px;
 }
 
-<<<<<<< HEAD
 .carruselsimplec {
 	position: relative;
 	height: 360px;
@@ -513,8 +428,6 @@ a.botoncarddoble:hover::before {
 	top: 1460px;
 }
 
-=======
->>>>>>> ef107b4ac7626fa2f4200efb29150137be4fc176
 .fondoLanzamiento {
 	opacity: 0.5;
 	z-index: -10;
@@ -924,37 +837,135 @@ a.botoncarddoble:hover::before {
 	scroll-snap-type: x mandatory;
 }
 
-.slider-carroDem li{
+.slider-carroDem li {
 	flex: 0 0 250px;
 	object-fit: cover;
 	scroll-snap-align: center;
 	margin: 20px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
 }
-.historiaHalo{
+
+.historiaHalo {
 	background-color: #F8F26D;
 	padding: 20px;
 	border-radius: 15px;
 }
+
 .historiaHalo p {
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.comentar{
-	width: 80%;
+
+.CajaComentario {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contenTituloComentario {
+	width: 90%;
+}
+
+.comentar {
 	font-size: 32px;
 	height: 250px;
 	background-color: #F8F26D;
 	padding: 20px;
+	border-radius: 15px;
 }
-.comentar textarea{
-	width: 80%;
+
+.comentar .comentarUser {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: row;
+	margin: 5px;
+}
+
+.comentar textarea {
+	width: 90%;
 	height: 100px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	padding: 5px;
 }
-.comentarEnviar{
+
+.comentarEnviar {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.comentarEnviar button {
+	margin-top: 5px;
+	width: 90px;
+	height: 35px;
+	border-radius: 15px;
+	font-weight: lighter;
+	color: #fff;
+	background-color: #565546;
+}
+
+.cajaComentarios {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.cajaComentarios .contComentarios {
+	width: 90%;
+}
+.otro{
+	width: 90%;
+}
+.contComentarios ul{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.comentario {
+	width: 1000px;
+	background-color: #F8F26D;
+	border-radius: 15px;
+	margin: 15px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.comentar div {
+	margin: 20px;
+}
+
+.comentario .comentarUser {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: row;
+	margin: 5px;
+}
+
+.comentario .comentarioEncabezado {
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+.comentario p {
+	font-weight: bolder;
+	margin-left: 70px;
+}
+
+.comentario .comentarioPie {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
+.comentario label {
+	margin-right: 5px;
+	font-weight: 400;
+	color: rgb(82, 82, 82);
 }
