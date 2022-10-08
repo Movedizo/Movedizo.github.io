@@ -319,6 +319,37 @@ footer .media {
 	color: black;
 }
 
+.card{
+	flex-wrap: wrap;
+}
+
+.contenedor{
+	position: relative;
+  	display: inline-block;
+  	text-align: center;
+}
+
+.contenedor img{
+	object-fit: cover;
+	width: 250px;
+	height: 200px;
+	vertical-align: middle;
+}
+
+.contenedor button{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	z-index: 1;
+}
+
+.card:hover{
+	background-color: #F8F26D;
+	transform: scale(1.10);	
+	transition: all 200ms ease;
+	margin: 20px;
+}
+
 h1 {
 	font-size: 40px;
 	margin: 60px 10px 10px 40px;
@@ -569,7 +600,7 @@ a.botoncarddoble:hover::before {
 	background-image: url("../img/anuncioHeader4.jpg");
 	background-size: cover;
 	width: 100%;
-	/*z-index: -2; me rompre la trancision de los botones*/
+	z-index: -2; /*me rompre la trancision de los botones*/
 	position: relative;
 }
 
@@ -662,6 +693,7 @@ a.botoncarddoble:hover::before {
 }
 
 .caracteristicas .fondoNegro {
+
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	z-index: -5;
 }
