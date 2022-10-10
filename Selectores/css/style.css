@@ -475,6 +475,8 @@ body::-webkit-scrollbar,
 }
 
 body::-webkit-scrollbar-thumb,
+.slider-containerComntario::-webkit-scrollbar-thumb,
+.slider-carroDemo::-webkit-scrollbar-thumb,
 .slider-containerNL::-webkit-scrollbar-thumb,
 .slider-containerLMC::-webkit-scrollbar-thumb,
 .slider-containerSPV::-webkit-scrollbar-thumb,
@@ -485,6 +487,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 body::-webkit-scrollbar-track,
+.slider-containerComntario::-webkit-scrollbar-track,
 .slider-containerNL::-webkit-scrollbar-track,
 .slider-containerLMC::-webkit-scrollbar-track,
 .slider-containerSPV::-webkit-scrollbar-track,
@@ -974,13 +977,9 @@ a.botoncarddoble:hover::before {
 	margin: 20px;
 }
 
-.img4Linea {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 .img4Linea img {
+	width: 98%;
+	object-fit: cover;
 	margin: 20px;
 	border-radius: 15px;
 }
@@ -994,7 +993,10 @@ a.botoncarddoble:hover::before {
 
 .comoJugar article {
 	width: 50%;
-	margin: 15px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .gamplayDemo {
@@ -1017,7 +1019,8 @@ a.botoncarddoble:hover::before {
 }
 
 .cuatroEnLinea h2 {
-	font-size: 32px;
+	margin-bottom: 20px;
+	font-size: 40px;
 }
 
 .DemoCarrito {
@@ -1035,30 +1038,37 @@ a.botoncarddoble:hover::before {
 
 .slider-carroDemo {
 	display: flex;
-	width: 100%;
-	height: 310px;
+	height: 340px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
+	margin-left: 100px;
+	margin-right: 190px;
 }
 
-.slider-carroDem li {
+.slider-carroDemo li {
 	flex: 0 0 250px;
 	object-fit: cover;
 	scroll-snap-align: center;
-	margin: 20px;
+	margin: 5px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.87));
+}
+
+.historiaHaloCont h2 {
+	margin-left: 100px;
+	margin-top: 40px;
 }
 
 .historiaHalo {
 	background-color: #F8F26D;
 	padding: 20px;
 	border-radius: 15px;
+	margin-left: 100px;
+	margin-right: 190px;
 }
 
 .historiaHalo p {
-	font-size: 18px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	font-size: 20px;
+	margin: 10px 20px;
 }
 
 .comentar {
@@ -1067,6 +1077,12 @@ a.botoncarddoble:hover::before {
 	padding: 10px;
 	width: 90%;
 	margin: 10px;
+}
+
+.cajaCome h2 {
+	margin-left: 100px;
+	margin-right: 190px;
+	margin-top: 40px;
 }
 
 .comentar textarea {
@@ -1085,9 +1101,11 @@ a.botoncarddoble:hover::before {
 }
 
 .comentarEnviar button {
-	margin-top: 5px;
-	width: 90px;
+	font-size: 20px;
+	margin-top: 20px;
+	width: 150px;
 	height: 35px;
+	text-size-adjust: ;
 	border-radius: 15px;
 	font-weight: lighter;
 	color: #fff;
@@ -1095,6 +1113,8 @@ a.botoncarddoble:hover::before {
 }
 
 .cajaComentario {
+	margin-left: 100px;
+	margin-right: 190px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1112,6 +1132,12 @@ a.botoncarddoble:hover::before {
 
 .comentar div {
 	margin: 20px;
+}
+
+.comentarios h2 {
+	margin-left: 100px;
+	margin-right: 190px;
+	margin-top: 40px;
 }
 
 .comentarUser {
@@ -1150,10 +1176,12 @@ a.botoncarddoble:hover::before {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	width: 95%;
-	height: 300px;
+	width: 55%;
+	height: 250px;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
+	margin-left: 400px;
+	margin-bottom: 50px;
 }
 
 .breadcrumb {
@@ -1216,18 +1244,15 @@ a.botoncarddoble:hover::before {
 	z-index: 1;
 	background: white;
 	background: linear-gradient(135deg, white, white);
-
 	box-shadow:
 		2px -2px 0 2px rgba(0, 0, 0, 0.4),
 		3px -3px 0 2px rgba(255, 255, 255, 0.1);
 	border-radius: 0 5px 0 50px;
 }
 
-
 .breadcrumb a:last-child:after {
 	content: none;
 }
-
 
 .flat a,
 .flat a:after {
