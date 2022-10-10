@@ -474,7 +474,6 @@ body::-webkit-scrollbar,
 }
 
 body::-webkit-scrollbar-thumb,
-.slider-containerComntario::-webkit-scrollbar-thumb,
 .slider-carroDemo::-webkit-scrollbar-thumb,
 .slider-containerNL::-webkit-scrollbar-thumb,
 .slider-containerLMC::-webkit-scrollbar-thumb,
@@ -486,7 +485,6 @@ body::-webkit-scrollbar-thumb,
 }
 
 body::-webkit-scrollbar-track,
-.slider-containerComntario::-webkit-scrollbar-track,
 .slider-containerNL::-webkit-scrollbar-track,
 .slider-containerLMC::-webkit-scrollbar-track,
 .slider-containerSPV::-webkit-scrollbar-track,
@@ -991,11 +989,8 @@ a.botoncarddoble:hover::before {
 }
 
 .comoJugar article {
-	width: 50%;
-	margin-left: 100px;
-	margin-right: 100px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	width: 45%;
+	margin-bottom: 40px;
 }
 
 .gamplayDemo {
@@ -1070,7 +1065,7 @@ a.botoncarddoble:hover::before {
 	margin: 10px 20px;
 }
 
-.comentar {
+.comentar{
 	background-color: #F8F26D;
 	border-radius: 15px;
 	padding: 10px;
@@ -1120,7 +1115,7 @@ a.botoncarddoble:hover::before {
 }
 
 .comentario {
-	width: 1000px;
+	width: 750px;
 	background-color: #F8F26D;
 	border-radius: 15px;
 	margin: 15px;
