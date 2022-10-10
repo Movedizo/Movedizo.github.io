@@ -647,8 +647,8 @@ a.botoncarddoble:hover::before {
 	color: #B69723;
 	-webkit-text-stroke: 0.5px black;
 	font-size: 40px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 70px;
+	margin-bottom: 20px;
 }
 
 .mainLazamiento section {
@@ -705,7 +705,7 @@ a.botoncarddoble:hover::before {
 }
 
 .mainLazamiento .anicionBotones {
-	margin: 25px;
+	margin: 40px;
 }
 
 .fondoNegro {
