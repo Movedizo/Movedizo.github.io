@@ -839,7 +839,7 @@ a.botoncarddoble:hover::before {
 
 .caracteristicas li :hover {
 	/*Como evito que el hover pase a los hijos y arreglar 
-													 que es mas ancho de lo que deberia*/
+									que es mas ancho de lo que deberia*/
 	border: solid 3px rgb(248, 219, 109);
 	color: #fff;
 }
