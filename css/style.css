@@ -385,16 +385,7 @@ h4{
 	border-radius: 20px;
 }
 
-.cardsimple button {
-	position: absolute;
-	top: 40%;
-	left: 22%;
-	cursor: pointer;
-	width: 160px;
-	height: 40px;
-	font-size: 30px;
-	border-radius: 20px;
-}
+
 
 .card{
 	width: 290px;
@@ -534,12 +525,21 @@ body::-webkit-scrollbar-track,
 	transition: all 200ms ease;
 	margin: 20px;
 	border-radius: 20px;
-	z-index:-1;
+}
+
+.cardsimple button {
+	position: absolute;
 	top: 40%;
 	left: 22%;
+	cursor: pointer;
+	width: 160px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 20px;
 }
 
 .cardsimple{
+	position: relative;
 	z-index: 2; 
 }
 
