@@ -1,11 +1,10 @@
 class Celda {
     constructor(posx, posy, contexto) {
-
         this.ficha = null;
         this.posx = posx;
         this.posy = posy;
         this.imagenCelda = new Image();
-        this.imagenCelda.src = "img/celda.png";
+        this.imagenCelda.src = "img/fichaTablero.png";
         this.imagenCelda.height = 60;
         this.imagenCelda.width = 60;
         this.ctx = contexto;

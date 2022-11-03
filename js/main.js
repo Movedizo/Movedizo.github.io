@@ -2,7 +2,6 @@
 
 document.getElementById("btnInicio").addEventListener("click", iniciar);
 
-
 function iniciar() {
     "use strict"
     let nomj1 = document.getElementById("nomJ1").value;
@@ -18,7 +17,6 @@ function iniciar() {
     let ctx = canvas.getContext("2d");
     let canvasWidth = canvas.width;
     let canvasHeight = canvas.height;
-
 
     let CANT_FIG = 42;
     let tablero = new Tablero(canvas.width, canvas.height, tipoJuego, ctx);
@@ -54,6 +52,7 @@ function iniciar() {
             addFiguras();
         }, 1);
     }
+
     function addFigura() {
         tablero.addCelda();
         addFicha();
@@ -65,8 +64,8 @@ function iniciar() {
         if (figuras.length < CANT_FIG) {
             setTimeout(addFiguras, 1);
         }
-
     }
+
     setTimeout(() => {
         addFiguras();
     }, 1);
@@ -74,7 +73,7 @@ function iniciar() {
     function addFicha() {
         let posX = 0;
         let posY = 0;
-        let img = "img/fichaPelota.png";
+        let img = "img/fichaSpartan.png";
         let ficha = new Ficha(posX, posY, ctx, jugador1);
         if (figuras.length < (CANT_FIG / 2)) {
             posX = Math.round(Math.random() * (80 - 40) + 40);
@@ -83,6 +82,7 @@ function iniciar() {
             ficha = new Ficha(posX, posY, ctx, jugador1, img);
             jugador1.addFicha(ficha);
         }
+
         else {
             posX = canvasWidth - Math.round(Math.random() * (80 - 40) + 40);
             posY = canvasHeight - Math.round(Math.random() * (80 - 40) + 40);
@@ -90,16 +90,14 @@ function iniciar() {
             ficha = new Ficha(posX, posY, ctx, jugador2, img);
             jugador2.addFicha(ficha);
         }
-
         figuras.push(ficha);
-
     }
+
     function drawFigure() {
         clearCanvas();
         tablero.draw();
         for (let index = 0; index < figuras.length; index++) {
             figuras[figuras.length - 1 - index].draw();
-
         }
     }
 
@@ -116,6 +114,7 @@ function iniciar() {
             }
         }
     }
+
     function cambiarTurno() {
         if (turno == jugador1) {
             turno = jugador2;
@@ -123,15 +122,14 @@ function iniciar() {
         else
             turno = jugador1;
     }
+
     function onMouseDown(e) {
         isMouseDown = true;
-
         let clickFig = findClickedFigure(e.layerX, e.layerY); //coordenadas de x e y adentro del canvans
         if (clickFig != null) {
             clickFig.setResaltado(true);
             lastClickedFigure = clickFig;
         }
-
         drawFigure();
     }
 
@@ -263,8 +261,8 @@ function iniciar() {
         if(tablero.checkGanador()){
             reinicio();
         }
-
     }
+
     function onMouseMove(e) {
         if (isMouseDown && lastClickedFigure != null && e.layerX >= 0 && e.layerX <= 1000 && e.layerY >= 0 && e.layerY <= 800) {
             lastClickedFigure.setPosition(e.layerX, e.layerY);
@@ -275,7 +273,4 @@ function iniciar() {
     canvas.addEventListener('mousedown', onMouseDown, false);
     document.addEventListener('mouseup', onMouseUp, false);
     canvas.addEventListener('mousemove', onMouseMove, false);
-
-
-
 }

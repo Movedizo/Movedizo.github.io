@@ -14,7 +14,6 @@ class Tablero {
                 this.maxColumas = 7;
                 this.lineas = 4;
                 break;
-
             case "2":
                 this.cantCeldas = 56;
                 this.maxFilas = 7;
@@ -30,20 +29,23 @@ class Tablero {
             default:
                 break;
         }
+
         console.log(this.cantCeldas);
         for (let i = 0; i < this.maxColumas; i++) {
             this.celdas[i] = new Array();
         }
     }
+
     libre(posF, posC) {
         return this.celdas[posF][posC].libre();
     }
+
     meterFicha(posF, posC, fichaJugador) {
         this.celdas[posF][posC].meterFicha(fichaJugador);
     }
+
     cantidad(mat) {
         let cant = 0;
-
         for (let y = 0; y < mat.length; y++) {
             for (let index = 0; index < mat[y].length; index++) {
                 cant += 1;
@@ -51,8 +53,8 @@ class Tablero {
         }
         return cant;
     }
-    addCelda() {
 
+    addCelda() {
         if (this.cantidad(this.celdas) % this.maxColumas == 0 && this.celdas[0].length != 0) {
             this.celdaX = this.celdaX - this.maxFilas * 60;
             this.celdaY = this.celdaY - 60;
@@ -80,16 +82,18 @@ class Tablero {
         else
             this.celdas[7].push(celda);
     }
+
     cargarTablero() {
         addCelda();
         if (celdas.length < cantCeldas) {
             setTimeout(addCelda, 10);
         }
     }
+
     tirarFicha(x, ficha, turno) {
         return this.colocarFicha(x, ficha, turno);
-
     }
+
     contarHorisontal(posY, posX, turno) {
         let posXoriginal = posX;
         let celda = this.celdas[posY][posX];
@@ -124,6 +128,7 @@ class Tablero {
             cant++;
         }
     }
+
     contarVertical(posY, posX, turno) {
         let posYoriginal = posY;
         let celda = this.celdas[posY][posX];
@@ -157,6 +162,7 @@ class Tablero {
             cant++;
         }
     }
+
     contarDiagonal(posY, posX, turno) {
         let posYoriginal = posY;
         let posXoriginal = posX;
@@ -194,6 +200,7 @@ class Tablero {
             cant++;
         }
     }
+
     colocarFicha(x, ficha, turno) {
         let y = 0;
         while (y < this.maxFilas) {
@@ -211,6 +218,7 @@ class Tablero {
             y++;
         }
     }
+    
     draw() {
         for (let i = 0; i < this.maxFilas; i++) {
             for (let x = 0; x < this.celdas[i].length; x++) {
