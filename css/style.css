@@ -1292,26 +1292,34 @@ a.botoncarddoble:hover::before {
     align-items: center;
     flex-direction: column;
 }
-  .menu{
+
+.menu{
 	margin-top: 10px;
     position: relative;
     border: 1px solid cyan;
     border-radius: 20px;
     width: 400px;
-  }
-  .menu div{
+}
+
+.menu div{
     position: relative;
     width: 0px;
     height: 20px;
     border-radius: 10px;
     background-color: cyan;
-  }
-  #html-menu{
-    animation: carga-barra 5s forwards;
-  }
+}
 
-  @keyframes carga-barra{
+#html-menu{
+    animation: carga-barra 5s forwards;
+}
+
+@keyframes carga-barra{
     100%{
       width: 100%;
     }
-  }
+}
+
+.juego{
+	display: flex;
+
+}

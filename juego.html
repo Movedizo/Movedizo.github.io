@@ -124,9 +124,32 @@
             <a href="juego.html">4 en linea</a>
         </div>
 
-        <section class="img4Linea">
-            <img src="img/4enLinea.png">
-        </section>
+        <div>
+            
+            <div>
+                <canvas id="miCanvas" width="1000" height="800"></canvas>
+            </div>
+            <div class="juego">
+                <ul>
+                    <li><button id="btnInicio">Iniciar</button></li>
+                    <li><select name="selecFichaJ1" id="selecFichaJ1">
+                            <option value="img/fichaPelota.png">Pelota comun</option>
+                            <option value="img/fichaPelotaRoja.png">Pelota roja</option>
+                        </select></li>
+                    <li><select name="selecFichaJ2" id="selecFichaJ2">
+                            <option value="img/fichaPelota.png">Pelota comun</option>
+                            <option value="img/fichaPelotaRoja.png">Pelota roja</option>
+                        </select></li>
+                    <li><input type="text" id="nomJ1"></li>
+                    <li><input type="text" id="nomJ2"></li>
+                    <li><select name="tipoJuego" id="tipoJuego">
+                            <option value="1">4 en linea</option>
+                            <option value="2">5 en linea</option>
+                            <option value="3">6 en linea</option>
+                    </select></li>
+                </ul>
+            </div>
+        </div>
 
         <section class="comoJugar">
             <article>
@@ -289,6 +312,7 @@
                 </div>
             </article>
         </section>
+        
     </main>
 
     <footer>
@@ -387,5 +411,11 @@
         </section>
     </footer>
 </body>
+
+<script src="js/main.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/celda.js"></script>
+<script src="js/tablero.js"></script>
+<script src="js/jugador.js"></script>
 
 </html>
