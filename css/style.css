@@ -1318,3 +1318,6 @@ a.botoncarddoble:hover::before {
       width: 100%;
     }
 }
+.canvas{
+	margin: 20px;
+}

@@ -26,7 +26,7 @@ class Celda {
     }
     meterFicha(fichaJugador) {
         this.ficha = fichaJugador;
-        fichaJugador.setPosition(this.posx + 30, this.posy + 30);
+        fichaJugador.setPosition(this.posx + 25, this.posy + 25);
     }
     draw() {
         this.ctx.drawImage(this.imagenCelda, this.posx, this.posy, this.imagenCelda.width, this.imagenCelda.height);
