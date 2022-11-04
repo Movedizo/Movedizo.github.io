@@ -8,8 +8,8 @@ class Ficha {
         this.resaltado = false;
         this.imagenFicha = new Image();
         this.imagenFicha.src = img;
-        this.imagenFicha.height = 40;
-        this.imagenFicha.width = 40;
+        this.imagenFicha.height = 50;
+        this.imagenFicha.width = 50;
         this.clickeable = true;
         this.ctx = contexto;
         this.jugador = jugador;
