@@ -18,16 +18,20 @@ class Celda {
         else
             return false;
     }
+
     getFicha() {
         return this.ficha;
     }
+
     setFicha(ficha) {
         this.ficha = ficha;
     }
+
     meterFicha(fichaJugador) {
         this.ficha = fichaJugador;
         fichaJugador.setPosition(this.posx + 25, this.posy + 25);
     }
+
     draw() {
         this.ctx.drawImage(this.imagenCelda, this.posx, this.posy, this.imagenCelda.width, this.imagenCelda.height);
     }
@@ -67,5 +71,4 @@ class Celda {
     libre() {
         return this.ficha == null;
     }
-
 }

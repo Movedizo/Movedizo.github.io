@@ -316,6 +316,10 @@ footer .media {
 	}
 }
 
+h6{
+	font-size: 24px;
+}	
+
 h2{
 	font-size: 50px;
 }
@@ -1318,6 +1322,44 @@ a.botoncarddoble:hover::before {
       width: 100%;
     }
 }
-.canvas{
+.contenedorJuego{
+	display: flex;
 	margin: 20px;
 }
+
+.contenedorCanvas button {
+	position: absolute;
+	top: 65%;
+	left: 25%;
+	cursor: pointer;
+	width: 160px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 20px;
+}
+
+.juego{
+	background-color: #F8F26D;
+	border-radius: 15px;
+	display: flex;
+	width: 550px;
+	align-items: center;
+	justify-content: center;
+}
+
+.juego div{
+	margin-top: 20px;	
+	text-align: center;
+}
+
+.unsc, .coverant, .tipoDeJuego, .jugadorUNSC, .jugadorCoverant{
+	margin-top: 10px;
+	align-self: center;
+	text-align: center;
+	font-size: 20px;
+	width: 200px;
+	height: 35px;
+	border-radius: 15px;
+	font-weight: lighter;
+}
+

@@ -36,38 +36,21 @@
                     <img src="img/fotoPerfil.jpg" alt="" class="fotoUsuario">
                     <h4>GranJorge22</h4>
                     <ul>
-                        <li><a href="http://">
-                                <h4>Mi Perfil</h4>
-                            </a></li>
-                        <li><a href="http://">
-                                <h4>Billetera</h4>
-                            </a></li>
-                        <li><a href="http://">
-                                <h4>Editar Perfil</h4>
-                            </a></li>
-                        <li><a href="http://">
-                                <h4>Soporte</h4>
-                            </a></li>
-                        <li><a href="http://">
-                                <h4>Salir</h4>
-                            </a></li>
+                        <li><a href="http://"><h4>Mi Perfil</h4></a></li>
+                        <li><a href="http://"><h4>Billetera</h4></a></li>
+                        <li><a href="http://"><h4>Editar Perfil</h4></a></li>
+                        <li><a href="http://"><h4>Soporte</h4></a></li>
+                        <li><a href="http://"><h4>Salir</h4></a></li>
                     </ul>
                 </div>
             </aside>
 
             <aside class="menuHamburguesa desaparecer" id="menuHamburguesa">
                 <article>
-                    <a href="index.html">
-                        <h4>Inicio</h4>
-                    </a>
-                    <a href="http://">
-                        <h4>Nuevos</h4>
-                    </a>
-                    <a href="http://">
-                        <h4>Recientes</h4>
-                    </a>
-                    <a href="http://">
-                        <h4>Treding</h4>
+                    <a href="index.html"><h4>Inicio</h4></a>
+                    <a href="http://"><h4>Nuevos</h4></a>
+                    <a href="http://"> <h4>Recientes</h4></a>
+                    <a href="http://"> <h4>Treding</h4>
                     </a>
                     <a href="http://">
                         <h4>Update</h4>
@@ -124,28 +107,49 @@
             <a href="juego.html">4 en linea</a>
         </div>
 
-        <div>  
-            <div>
+        <div class="contenedorJuego">  
+            <div class="contenedorCanvas">
                 <canvas class="canvas" id="miCanvas" width="900" height="600"></canvas>
+                <button class="fifth2" id="btnInicio">Jugar</button>
             </div>
             <div class="juego">
                 <ul>
-                    <li><button id="btnInicio">Iniciar</button></li>
-                    <li><select name="selecFichaJ1" id="selecFichaJ1">
+                    <div class="identificacion">
+                        <h2>Identificate Soldado</h2>
+                        <div>
+                            <h6>Jugador UNSC</h6>
+                            <input class="jugadorUNSC" type="text" id="nomJ1">
+                        </div>
+                        <div>
+                            <h6>Jugador Coverant</h6>
+                            <input class="jugadorCoverant" ype="text" id="nomJ2">
+                        </div>
+                    </div>
+
+                    <div class="avatarUNSC" >
+                        <h6>Avatar UNSC</h6>
+                        <select class="unsc" name="selecFichaJ1" id="selecFichaJ1">
                             <option value="img/fichaSpartan.png">Spartan</option>
                             <option value="img/fichaWarthog.png">Warthog</option>
-                    </select></li>
-                    <li><select name="selecFichaJ2" id="selecFichaJ2">
+                        </select>
+                    </div>
+
+                    <div class="avatarCoverant" >
+                        <h6>Avatar Coverant</h6>
+                        <select class="coverant" name="selecFichaJ2" id="selecFichaJ2">
                             <option value="img/fichaElite.png">Elite</option>
                             <option value="img/fichaGhost.png">Ghost</option>
-                    </select></li>
-                    <li><input type="text" id="nomJ1"></li>
-                    <li><input type="text" id="nomJ2"></li>
-                    <li><select name="tipoJuego" id="tipoJuego">
+                        </select>
+                    </div>
+
+                    <div class="tipoDeLinea">
+                        <h6>Elige el tipo de juego</h6>
+                        <select class="tipoDeJuego" name="tipoJuego" id="tipoJuego">
                             <option value="1">4 en linea</option>
                             <option value="2">5 en linea</option>
                             <option value="3">6 en linea</option>
-                    </select></li>
+                        </select>
+                    </div>
                 </ul>
             </div>
         </div>
