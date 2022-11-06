@@ -36,21 +36,38 @@
                     <img src="img/fotoPerfil.jpg" alt="" class="fotoUsuario">
                     <h4>GranJorge22</h4>
                     <ul>
-                        <li><a href="http://"><h4>Mi Perfil</h4></a></li>
-                        <li><a href="http://"><h4>Billetera</h4></a></li>
-                        <li><a href="http://"><h4>Editar Perfil</h4></a></li>
-                        <li><a href="http://"><h4>Soporte</h4></a></li>
-                        <li><a href="http://"><h4>Salir</h4></a></li>
+                        <li><a href="http://">
+                                <h4>Mi Perfil</h4>
+                            </a></li>
+                        <li><a href="http://">
+                                <h4>Billetera</h4>
+                            </a></li>
+                        <li><a href="http://">
+                                <h4>Editar Perfil</h4>
+                            </a></li>
+                        <li><a href="http://">
+                                <h4>Soporte</h4>
+                            </a></li>
+                        <li><a href="http://">
+                                <h4>Salir</h4>
+                            </a></li>
                     </ul>
                 </div>
             </aside>
 
             <aside class="menuHamburguesa desaparecer" id="menuHamburguesa">
                 <article>
-                    <a href="index.html"><h4>Inicio</h4></a>
-                    <a href="http://"><h4>Nuevos</h4></a>
-                    <a href="http://"> <h4>Recientes</h4></a>
-                    <a href="http://"> <h4>Treding</h4>
+                    <a href="index.html">
+                        <h4>Inicio</h4>
+                    </a>
+                    <a href="http://">
+                        <h4>Nuevos</h4>
+                    </a>
+                    <a href="http://">
+                        <h4>Recientes</h4>
+                    </a>
+                    <a href="http://">
+                        <h4>Treding</h4>
                     </a>
                     <a href="http://">
                         <h4>Update</h4>
@@ -107,14 +124,20 @@
             <a href="juego.html">4 en linea</a>
         </div>
 
-        <div class="contenedorJuego">  
+        <div class="contenedorJuego">
             <div class="contenedorCanvas">
                 <canvas class="canvas" id="miCanvas" width="900" height="600"></canvas>
                 <button class="fifth2" id="btnInicio">Jugar</button>
+                <div class="desaparecer" id="cartelFinPartida">
+                    <h1 id="cartelFinMensaje">Felicitaciones</h1>
+                    <h2 id="cartelFinGanador">Gano el jugador: Mengano</h2>
+                    <button class="fifth2 btnReiniciar" id="btnReinicio2">Reiniciar</button>
+                </div>
             </div>
             <div class="juego">
                 <ul>
                     <div class="identificacion">
+                        <input class="temporizador" type="text" value="00:00" id="temporizador">
                         <h2>Identificate Soldado</h2>
                         <div>
                             <h6>Jugador UNSC</h6>
@@ -126,7 +149,7 @@
                         </div>
                     </div>
 
-                    <div class="avatarUNSC" >
+                    <div class="avatarUNSC">
                         <h6>Avatar UNSC</h6>
                         <select class="unsc" name="selecFichaJ1" id="selecFichaJ1">
                             <option value="img/fichaSpartan.png">Spartan</option>
@@ -134,7 +157,7 @@
                         </select>
                     </div>
 
-                    <div class="avatarCoverant" >
+                    <div class="avatarCoverant">
                         <h6>Avatar Coverant</h6>
                         <select class="coverant" name="selecFichaJ2" id="selecFichaJ2">
                             <option value="img/fichaElite.png">Elite</option>
@@ -149,6 +172,9 @@
                             <option value="2">5 en linea</option>
                             <option value="3">6 en linea</option>
                         </select>
+                    </div>
+                    <div>
+                        <button class="fifth2 btnReiniciar desaparecer" id="btnReinicio">Reiniciar</button>
                     </div>
                 </ul>
             </div>
@@ -241,7 +267,7 @@
 
             <article class="comentarios">
                 <h2>Comentarios</h4>
-                <div class="comentariosCaja">
+                    <div class="comentariosCaja">
                         <ul class="slider-containerComntario">
                             <li>
                                 <div class="comentario">
@@ -312,9 +338,9 @@
                                 </div>
                             </li>
                         </ul>
-                </div>
+                    </div>
             </article>
-        </section>   
+        </section>
     </main>
 
     <footer>

@@ -102,7 +102,6 @@ class Tablero {
             console.log("Entro en calculo derecha cant vale = " + cant);
             cant++;
             if (cant == this.lineas) {
-                alert("Gano el jugador " + celda.getFicha().getJugador().getNombre());
                 return 1;
             }
             posX++;
@@ -117,7 +116,6 @@ class Tablero {
         while (!celda.libre() && celda != null && celda.esJugador(turno)) {
             console.log("Entro en calculo izquierda cant vale = " + cant);
             if (cant == this.lineas) {
-                alert("Gano el jugador " + celda.getFicha().getJugador().getNombre());
                 return 1;
             }
             posX--;
@@ -137,7 +135,6 @@ class Tablero {
             console.log("Calculo arriba cant vale = " + cant);
             cant++;
             if (cant == this.lineas) {
-                alert("Gano el jugador " + celda.getFicha().getJugador().getNombre());
                 return 1;
             }
             posY++;
@@ -151,7 +148,6 @@ class Tablero {
         while (!celda.libre() && celda != null && celda.esJugador(turno)) {
             console.log("Calculo abajo cant vale = " + cant);
             if (cant == this.lineas) {
-                alert("Gano el jugador " + celda.getFicha().getJugador().getNombre());
                 return 1;
             }
             posY--;
@@ -172,7 +168,6 @@ class Tablero {
             console.log("Diagonal arriba cant vale = " + cant);
             cant++;
             if (cant == this.lineas) {
-                alert("Gano el jugador " + celda.getFicha().getJugador().getNombre());
                 return 1;
             }
             posY++;
@@ -188,7 +183,6 @@ class Tablero {
         while (!celda.libre() && celda != null && celda.esJugador(turno)) {
             console.log("Diagonal abajo cant vale = " + cant);
             if (cant == this.lineas) {
-                alert("Gano el jugador " + celda.getFicha().getJugador().getNombre());
                 return 1;
             }
             posY--;

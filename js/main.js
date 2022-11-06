@@ -1,9 +1,15 @@
-//document.addEventListener("DOMContentLoaded", iniciar);
 
 document.getElementById("btnInicio").addEventListener("click", iniciar);
+//btnInicio = addEventListener("click", iniciar);
+let cartelFinPartida = document.getElementById("cartelFinPartida");
+let cartelFinMensaje = document.getElementById("cartelFinMensaje");
+let cartelFinGanador = document.getElementById("cartelFinGanador");
 
 function iniciar() {
     "use strict"
+    cartelFinPartida.classList.add("decaparecer");
+    cartelFinPartida.classList.remove("cartelFinPartida");
+    document.getElementById("btnInicio").classList.add("desaparecer");
     let nomj1 = document.getElementById("nomJ1").value;
     let nomj2 = document.getElementById("nomJ2").value;
 
@@ -11,8 +17,14 @@ function iniciar() {
     let fichaj2 = document.getElementById("selecFichaJ2").value;
 
     let tipoJuego = document.getElementById("tipoJuego").value;
+    let btnReinicio = document.getElementById("btnReinicio");
+    let btnReinicio2 = document.getElementById("btnReinicio2");
 
-    console.log(fichaj1 + " " + fichaj2 + " " + nomj1 + " " + nomj2 + " " + tipoJuego);
+    btnReinicio.classList.remove("desaparecer");
+    btnReinicio.addEventListener("click", reinicio);
+    btnReinicio2.addEventListener("click", reinicio);
+
+    let temporizador = document.getElementById("temporizador");
     let canvas = document.getElementById("miCanvas");
     let ctx = canvas.getContext("2d");
     let canvasWidth = canvas.width;
@@ -23,15 +35,19 @@ function iniciar() {
     let jugador1 = new Jugador(nomj1);
     let jugador2 = new Jugador(nomj2);
     let turno = jugador1;
+    let limiteTiempo = 0;
     switch (tipoJuego) {
         case "1":
             CANT_FIG = 42;
+            limiteTiempo = 5;
             break;
         case "2":
             CANT_FIG = 56;
+            limiteTiempo = 7;
             break;
         case "3":
             CANT_FIG = 72;
+            limiteTiempo = 9;
             break;
         default:
             break;
@@ -39,8 +55,13 @@ function iniciar() {
     let figuras = [];
     let lastClickedFigure = null;
     let isMouseDown = false;
+    let seg = 0;
+    let min = limiteTiempo;
 
     function reinicio() {
+        btnReinicio.classList.remove("desaparecer");
+        cartelFinPartida.classList.add("decaparecer");
+        cartelFinPartida.classList.remove("cartelFinPartida");
         tablero = new Tablero(canvas.width, canvas.height, tipoJuego, ctx);
         turno = jugador1;
         jugador1.borrarFichas();
@@ -48,9 +69,12 @@ function iniciar() {
         figuras = [];
         lastClickedFigure = null;
         isMouseDown = false;
+        seg = 0;
+        min = limiteTiempo;
         setTimeout(() => {
             addFiguras();
         }, 1);
+        contar();
     }
 
     function addFigura() {
@@ -69,7 +93,30 @@ function iniciar() {
     setTimeout(() => {
         addFiguras();
     }, 1);
-
+    contar();
+    function contar() {
+        if (seg < 10)
+            temporizador.value = "0" + min + ":0" + seg;
+        else
+            temporizador.value = "0" + min + ":" + seg;
+        if (seg == 0) {
+            seg = 59;
+            min--;
+        }
+        else
+            seg--;
+        setTimeout(() => {
+            if (!(seg == 0 && min == 0))
+                contar();
+        }, 1000);
+        if (seg == 0 && min == 0) {
+            cartelFinPartida.classList.remove("decaparecer");
+            cartelFinPartida.classList.add("cartelFinPartida");
+            cartelFinMensaje.innerHTML = "Se agoto el tiempo";
+            cartelFinGanador.innerHTML = "Es un empate";
+            btnReinicio.classList.add("desaparecer");
+        }
+    }
     function addFicha() {
         let posX = 0;
         let posY = 0;
@@ -110,9 +157,6 @@ function iniciar() {
     function findClickedFigure(x, y) {
         for (let index = 0; index < figuras.length; index++) {
             const element = figuras[index];
-            console.log(figuras.length +"Posicion x ficha " + element.getPosX() + " Posicion x  " + (x - 20));
-            console.log("Posicion y ficha " + element.getPosY() + " Posicion y  " + (y - 193));
-            //console.log(x + "  " + y);
             if (element.isPointInside(x - 20, y - 193) && element.getClickeable() && turno == element.getJugador()) {
                 return element;
             }
@@ -128,7 +172,7 @@ function iniciar() {
     }
 
     function onMouseDown(e) {
-       // console.log(e.layerX + "   "  + e.layerY);
+        console.log(e.layerX + " x    y " + e.layerY);
         isMouseDown = true;
         let clickFig = findClickedFigure(e.layerX, e.layerY); //coordenadas de x e y adentro del canvans
         if (clickFig != null) {
@@ -139,35 +183,34 @@ function iniciar() {
     }
 
     function onMouseUp(e) {
-       // console.log(e.layerX + "   "  + e.layerY);
         let cuatroEnLinea = 0;
         switch (tipoJuego) {
             case "1":
-                if (lastClickedFigure != null && e.layerX >= 290 - 20 && e.layerX <= 330 - 20 && e.layerY >= 390 - 193 && e.layerY <= 450 - 193) {
+                if (lastClickedFigure != null && e.layerX >= 210 && e.layerX <= 250 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(0, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 350 -20 && e.layerX <= 390 -20 && e.layerY >= 390 - 193 && e.layerY <= 450 - 193) {
+                else if (lastClickedFigure != null && e.layerX >= 270 && e.layerX <= 310 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(1, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 410 && e.layerX <= 450 && e.layerY >= 390 && e.layerY <= 450) {
+                else if (lastClickedFigure != null && e.layerX >= 330 && e.layerX <= 370 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(2, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 470 && e.layerX <= 510 && e.layerY >= 390 && e.layerY <= 450) {
+                else if (lastClickedFigure != null && e.layerX >= 390 && e.layerX <= 430 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(3, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 530 && e.layerX <= 570 && e.layerY >= 390 && e.layerY <= 450) {
+                else if (lastClickedFigure != null && e.layerX >= 450 && e.layerX <= 490 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(4, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 590 && e.layerX <= 630 && e.layerY >= 390 && e.layerY <= 450) {
+                else if (lastClickedFigure != null && e.layerX >= 510 && e.layerX <= 550 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(5, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 650 - 20 && e.layerX <= 790 -20 && e.layerY >= 390-193 && e.layerY <= 450- 193) {
+                else if (lastClickedFigure != null && e.layerX >= 570 && e.layerX <= 610 && e.layerY >= 300 && e.layerY <= 375) {
                     cuatroEnLinea = tablero.tirarFicha(6, lastClickedFigure, turno);
                     cambiarTurno();
                 }
@@ -176,35 +219,35 @@ function iniciar() {
                 break;
 
             case "2":
-                if (lastClickedFigure != null && e.layerX >= 290 && e.layerX <= 330 && e.layerY >= 330 && e.layerY <= 390) {
+                if (lastClickedFigure != null && e.layerX >= 210 && e.layerX <= 250 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(0, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 350 && e.layerX <= 390 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 270 && e.layerX <= 310 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(1, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 410 && e.layerX <= 450 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 330 && e.layerX <= 370 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(2, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 470 && e.layerX <= 510 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 390 && e.layerX <= 430 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(3, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 530 && e.layerX <= 570 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 450 && e.layerX <= 490 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(4, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 590 && e.layerX <= 630 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 510 && e.layerX <= 550 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(5, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 650 && e.layerX <= 690 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 570 && e.layerX <= 610 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(6, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 710 && e.layerX <= 750 && e.layerY >= 330 && e.layerY <= 390) {
+                else if (lastClickedFigure != null && e.layerX >= 630 && e.layerX <= 670 && e.layerY >= 235 && e.layerY <= 310) {
                     cuatroEnLinea = tablero.tirarFicha(7, lastClickedFigure, turno);
                     cambiarTurno();
                 }
@@ -213,39 +256,39 @@ function iniciar() {
                 break;
 
             case "3":
-                if (lastClickedFigure != null && e.layerX >= 290 && e.layerX <= 330 && e.layerY >= 270 && e.layerY <= 330) {
+                if (lastClickedFigure != null && e.layerX >= 210 && e.layerX <= 250 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(0, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 350 && e.layerX <= 390 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 270 && e.layerX <= 310 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(1, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 410 && e.layerX <= 450 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 330 && e.layerX <= 370 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(2, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 470 && e.layerX <= 510 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 390 && e.layerX <= 430 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(3, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 530 && e.layerX <= 570 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 450 && e.layerX <= 490 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(4, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 590 && e.layerX <= 630 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 510 && e.layerX <= 550 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(5, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 650 && e.layerX <= 690 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 570 && e.layerX <= 610 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(6, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 710 && e.layerX <= 750 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 630 && e.layerX <= 670 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(7, lastClickedFigure, turno);
                     cambiarTurno();
                 }
-                else if (lastClickedFigure != null && e.layerX >= 770 && e.layerX <= 810 && e.layerY >= 270 && e.layerY <= 330) {
+                else if (lastClickedFigure != null && e.layerX >= 690 && e.layerX <= 730 && e.layerY >= 175 && e.layerY <= 250) {
                     cuatroEnLinea = tablero.tirarFicha(8, lastClickedFigure, turno);
                     cambiarTurno();
                 }
@@ -255,15 +298,24 @@ function iniciar() {
             default:
                 break;
         }
-        
-        if (cuatroEnLinea == 1)
-            reinicio();
-        if (lastClickedFigure != null)
-            lastClickedFigure.setResaltado(false);
-
         lastClickedFigure = null;
         isMouseDown = false;
         drawFigure();
+        if (cuatroEnLinea == 1) {
+            if (!(seg == 0 && min == 0))
+                cartelFinPartida.classList.remove("decaparecer");
+            cartelFinPartida.classList.add("cartelFinPartida");
+            cartelFinMensaje.innerHTML = "Felicitaciones";
+            if (turno == jugador1)
+                cartelFinGanador.innerHTML = "Gano el jugador: " + jugador2.getNombre();
+            else
+                cartelFinGanador.innerHTML = "Gano el jugador: " + jugador1.getNombre();
+            btnReinicio.classList.add("desaparecer");
+
+        }
+        //reinicio();
+        if (lastClickedFigure != null)
+            lastClickedFigure.setResaltado(false);
         /*if(tablero.checkGanador()){
             reinicio();
         }*/
