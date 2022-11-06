@@ -117,6 +117,7 @@ function iniciar() {
             btnReinicio.classList.add("desaparecer");
         }
     }
+
     function addFicha() {
         let posX = 0;
         let posY = 0;
@@ -298,6 +299,7 @@ function iniciar() {
             default:
                 break;
         }
+
         lastClickedFigure = null;
         isMouseDown = false;
         drawFigure();
@@ -313,6 +315,7 @@ function iniciar() {
             btnReinicio.classList.add("desaparecer");
 
         }
+        
         //reinicio();
         if (lastClickedFigure != null)
             lastClickedFigure.setResaltado(false);

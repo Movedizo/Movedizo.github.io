@@ -1007,7 +1007,6 @@ a.botoncarddoble:hover::before {
 
 .comoJugar {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
