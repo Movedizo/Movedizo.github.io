@@ -326,6 +326,8 @@ function iniciar() {
             cartelFinPartida.classList.remove("desaparecer");
             cartelFinPartida.classList.add("cartelFinPartida");
             cartelFinMensaje.innerHTML = "Felicitaciones";
+            min = 0;
+            seg = 0;
             if (turno == jugador1)
                 cartelFinGanador.innerHTML = "Gano el jugador: " + jugador2.getNombre();
             else

@@ -1372,7 +1372,7 @@ a.botoncarddoble:hover::before {
 
 .temporizador {
 	margin-bottom: 25px;
-	max-width: 200px;
+	max-width: 75px;
 	font-size: 22px;
 	border-radius: 15px;
 	text-align: center;
