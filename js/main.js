@@ -13,6 +13,9 @@ function iniciar() {
     let nomj1 = document.getElementById("nomJ1").value;
     let nomj2 = document.getElementById("nomJ2").value;
 
+    let turnoJ1 = document.getElementById("nomTurno1");
+    let turnoJ2 = document.getElementById("nomTurno2");
+
     let fichaj1 = document.getElementById("selecFichaJ1").value;
     let fichaj2 = document.getElementById("selecFichaJ2").value;
 
@@ -21,6 +24,7 @@ function iniciar() {
     let btnReinicio2 = document.getElementById("btnReinicio2");
 
     btnReinicio.classList.remove("desaparecer");
+    btnReinicio2.classList.add("desaparecer");
     btnReinicio.addEventListener("click", iniciar);
     btnReinicio2.addEventListener("click", iniciar);
 
@@ -29,12 +33,18 @@ function iniciar() {
     let ctx = canvas.getContext("2d");
     let canvasWidth = canvas.width;
     let canvasHeight = canvas.height;
+    let imagenFondo = new Image();
+    imagenFondo.src = "img/fondoCanvas.png";
+    imagenFondo.height = 600;
+    imagenFondo.width = 900;
 
     let CANT_FIG = 42;
     let tablero = new Tablero(canvas.width, canvas.height, tipoJuego, ctx);
     let jugador1 = new Jugador(nomj1);
     let jugador2 = new Jugador(nomj2);
     let turno = jugador1;
+    turnoJ1.innerHTML = "Tu turno";
+    turnoJ1.classList.add("turno");
     let limiteTiempo = 0;
     switch (tipoJuego) {
         case "1":
@@ -59,6 +69,9 @@ function iniciar() {
     let min = limiteTiempo;
 
     function reinicio() {
+        salir();
+        iniciar();
+
         btnReinicio.classList.remove("desaparecer");
         cartelFinPartida.classList.add("decaparecer");
         cartelFinPartida.classList.remove("cartelFinPartida");
@@ -128,7 +141,8 @@ function iniciar() {
                 contar();
         }, 1000);
         if (seg == 0 && min == 0) {
-            cartelFinPartida.classList.remove("decaparecer");
+            btnReinicio2.classList.remove("desaparecer");
+            cartelFinPartida.classList.remove("desaparecer");
             cartelFinPartida.classList.add("cartelFinPartida");
             cartelFinMensaje.innerHTML = "Se agoto el tiempo";
             cartelFinGanador.innerHTML = "Es un empate";
@@ -147,7 +161,6 @@ function iniciar() {
             img = fichaj1;
             ficha = new Ficha(posX, posY, ctx, jugador1, img);
             jugador1.addFicha(ficha);
-            console.log(posX + "  " + posY);
         }
 
         else {
@@ -162,6 +175,7 @@ function iniciar() {
 
     function drawFigure() {
         clearCanvas();
+        ctx.drawImage(imagenFondo, 0, 0, imagenFondo.width, imagenFondo.height);
         tablero.draw();
         for (let index = 0; index < figuras.length; index++) {
             figuras[figuras.length - 1 - index].draw();
@@ -185,15 +199,23 @@ function iniciar() {
     function cambiarTurno() {
         if (turno == jugador1) {
             turno = jugador2;
+            turnoJ2.innerHTML = "Tu turno";
+            turnoJ2.classList.add("turno");
+            turnoJ1.classList.remove("turno");
+            turnoJ1.innerHTML = "Jugador UNSC";
         }
-        else
+        else {
             turno = jugador1;
+            turnoJ2.innerHTML = "Jugador Coverant";
+            turnoJ1.classList.add("turno");
+            turnoJ2.classList.remove("turno");
+            turnoJ1.innerHTML = "Tu turno";
+        }
     }
 
     function onMouseDown(e) {
-        console.log(e.layerX + " x    y " + e.layerY);
         isMouseDown = true;
-        let clickFig = findClickedFigure(e.layerX, e.layerY); //coordenadas de x e y adentro del canvans
+        let clickFig = findClickedFigure(e.layerX, e.layerY);
         if (clickFig != null) {
             clickFig.setResaltado(true);
             lastClickedFigure = clickFig;
@@ -322,8 +344,8 @@ function iniciar() {
         isMouseDown = false;
         drawFigure();
         if (cuatroEnLinea == 1) {
-            if (!(seg == 0 && min == 0))
-                cartelFinPartida.classList.remove("decaparecer");
+            btnReinicio2.classList.remove("desaparecer");
+            cartelFinPartida.classList.remove("desaparecer");
             cartelFinPartida.classList.add("cartelFinPartida");
             cartelFinMensaje.innerHTML = "Felicitaciones";
             if (turno == jugador1)
@@ -333,13 +355,8 @@ function iniciar() {
             btnReinicio.classList.add("desaparecer");
 
         }
-        
-        //reinicio();
         if (lastClickedFigure != null)
             lastClickedFigure.setResaltado(false);
-        /*if(tablero.checkGanador()){
-            reinicio();
-        }*/
     }
 
     function onMouseMove(e) {
@@ -348,7 +365,9 @@ function iniciar() {
             drawFigure();
         }
     }
-
+    function salir() {
+        //hace que salga de iniciar
+    }
     canvas.addEventListener('mousedown', onMouseDown, false);
     document.addEventListener('mouseup', onMouseUp, false);
     canvas.addEventListener('mousemove', onMouseMove, false);

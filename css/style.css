@@ -1342,7 +1342,8 @@ a.botoncarddoble:hover::before {
 
 .juego {
 	background-color: #F8F26D;
-	border-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 	display: flex;
 	width: 550px;
 	align-items: center;
@@ -1416,4 +1417,9 @@ a.botoncarddoble:hover::before {
 	position:relative;
 	top: 0;
     left: 0;
+}
+
+.turno{
+	color: #88AC21;
+	-webkit-text-stroke: 0.5px black;
 }

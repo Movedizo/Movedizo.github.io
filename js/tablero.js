@@ -30,7 +30,6 @@ class Tablero {
                 break;
         }
 
-        console.log(this.cantCeldas);
         for (let i = 0; i < this.maxColumas; i++) {
             this.celdas[i] = new Array();
         }
@@ -111,7 +110,7 @@ class Tablero {
             else
                 break;
         }
-        
+
         posX = posXoriginal;
         celda = this.celdas[posY][posX];
         while (!celda.libre() && celda != null && celda.esJugador(turno)) {
@@ -160,7 +159,7 @@ class Tablero {
         }
     }
 
-    contarDiagonal(posY, posX, turno) {
+    contarDiagonalPrimera(posY, posX, turno) {
         let posYoriginal = posY;
         let posXoriginal = posX;
         let celda = this.celdas[posY][posX];
@@ -195,6 +194,41 @@ class Tablero {
             cant++;
         }
     }
+    contarDiagonalSegunda(posY, posX, turno) {
+        let posYoriginal = posY;
+        let posXoriginal = posX;
+        let celda = this.celdas[posY][posX];
+        let cant = 0;
+        while (!celda.libre() && celda != null && celda.esJugador(turno)) {
+            console.log("Diagonal arriba cant vale = " + cant);
+            cant++;
+            if (cant == this.lineas) {
+                return 1;
+            }
+            posY--;
+            posX++;
+            if (posY >= 0 && posX < this.maxColumas)
+                celda = this.celdas[posY][posX];
+            else
+                break;
+        }
+        posY = posYoriginal;
+        posX = posXoriginal;
+        celda = this.celdas[posY][posX];
+        while (!celda.libre() && celda != null && celda.esJugador(turno)) {
+            console.log("Diagonal abajo cant vale = " + cant);
+            if (cant == this.lineas) {
+                return 1;
+            }
+            posY++;
+            posX--;
+            if (posY < this.maxFilas && posX >= 0)
+                celda = this.celdas[posY][posX];
+            else
+                return 0;
+            cant++;
+        }
+    }
 
     colocarFicha(x, ficha, turno) {
         let y = 0;
@@ -202,7 +236,7 @@ class Tablero {
             if (this.libre(y, x)) {
                 this.meterFicha(y, x, ficha);
                 ficha.setClickeable(false);
-                if (this.contarHorisontal(y, x, turno) == 1 || this.contarVertical(y, x, turno) == 1 || this.contarDiagonal(y, x, turno) == 1)
+                if (this.contarHorisontal(y, x, turno) == 1 || this.contarVertical(y, x, turno) == 1 || this.contarDiagonalPrimera(y, x, turno) == 1 || this.contarDiagonalSegunda(y, x, turno) == 1)
                     return 1;
                 else
                     return 0;
