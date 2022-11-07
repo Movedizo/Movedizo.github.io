@@ -34,7 +34,12 @@ class Tablero {
             this.celdas[i] = new Array();
         }
     }
-
+    reinicio(){
+        this.celdas = new Array();
+        for (let i = 0; i < this.maxColumas; i++) {
+            this.celdas[i] = new Array();
+        }
+    }
     libre(posF, posC) {
         return this.celdas[posF][posC].libre();
     }

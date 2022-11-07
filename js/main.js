@@ -25,8 +25,8 @@ function iniciar() {
 
     btnReinicio.classList.remove("desaparecer");
     btnReinicio2.classList.add("desaparecer");
-    btnReinicio.addEventListener("click", iniciar);
-    btnReinicio2.addEventListener("click", iniciar);
+    btnReinicio.addEventListener("click", reinicio);
+    btnReinicio2.addEventListener("click", reinicio);
 
     let temporizador = document.getElementById("temporizador");
     let canvas = document.getElementById("miCanvas");
@@ -69,43 +69,20 @@ function iniciar() {
     let min = limiteTiempo;
 
     function reinicio() {
-        salir();
-        iniciar();
-
-        btnReinicio.classList.remove("desaparecer");
-        cartelFinPartida.classList.add("decaparecer");
-        cartelFinPartida.classList.remove("cartelFinPartida");
-        tablero = new Tablero(canvas.width, canvas.height, tipoJuego, ctx);
-        let jugador1 = new Jugador(nomj1);
-        let jugador2 = new Jugador(nomj2);
-        switch (tipoJuego) {
-            case "1":
-                CANT_FIG = 42;
-                limiteTiempo = 5;
-                break;
-            case "2":
-                CANT_FIG = 56;
-                limiteTiempo = 7;
-                break;
-            case "3":
-                CANT_FIG = 72;
-                limiteTiempo = 9;
-                break;
-            default:
-                break;
-        }
-        turno = jugador1;
+        clearCanvas();
+        min = 0;
+        seg = 0;
         jugador1.borrarFichas();
         jugador2.borrarFichas();
         figuras = [];
-        lastClickedFigure = null;
-        isMouseDown = false;
-        seg = 0;
-        min = limiteTiempo;
-        setTimeout(() => {
-            addFiguras();
-        }, 1);
-        contar();
+        tablero.reinicio();
+        turnoJ1.classList.remove("turno");
+        turnoJ2.classList.remove("turno");
+        turnoJ1.innerHTML = "Jugador UNSC";
+        turnoJ2.innerHTML = "Jugador Coverant";
+        turno = null;
+        drawFigure();
+        iniciar();
     }
 
     function addFigura() {
@@ -224,6 +201,7 @@ function iniciar() {
     }
 
     function onMouseUp(e) {
+        console.log("cantidad");
         let cuatroEnLinea = 0;
         switch (tipoJuego) {
             case "1":
@@ -365,10 +343,8 @@ function iniciar() {
             drawFigure();
         }
     }
-    function salir() {
-        //hace que salga de iniciar
-    }
     canvas.addEventListener('mousedown', onMouseDown, false);
     document.addEventListener('mouseup', onMouseUp, false);
     canvas.addEventListener('mousemove', onMouseMove, false);
+
 }
