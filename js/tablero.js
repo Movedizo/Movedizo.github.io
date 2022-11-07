@@ -111,6 +111,7 @@ class Tablero {
             else
                 break;
         }
+        
         posX = posXoriginal;
         celda = this.celdas[posY][posX];
         while (!celda.libre() && celda != null && celda.esJugador(turno)) {

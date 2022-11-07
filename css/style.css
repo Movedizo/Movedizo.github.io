@@ -1007,7 +1007,6 @@ a.botoncarddoble:hover::before {
 
 .comoJugar {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
@@ -1033,7 +1032,7 @@ a.botoncarddoble:hover::before {
 	margin: 15px 15px 10px 20px;
 	list-style-type: disc;
 	font-weight: bolder;
-	font-size: 26px;
+	font-size: 24px;
 }
 
 .cuatroEnLinea h2 {
@@ -1351,7 +1350,7 @@ a.botoncarddoble:hover::before {
 }
 
 .juego div {
-	margin-top: 20px;
+	margin-top: 12px;
 	text-align: center;
 }
 
@@ -1360,30 +1359,34 @@ a.botoncarddoble:hover::before {
 .tipoDeJuego,
 .jugadorUNSC,
 .jugadorCoverant {
-	margin-top: 10px;
+	margin-top: 2px;
 	align-self: center;
 	text-align: center;
 	font-size: 20px;
 	width: 200px;
-	height: 35px;
+	height: 30px;
 	border-radius: 15px;
 	font-weight: lighter;
 }
 
 .temporizador {
-	max-width: 75px;
+	margin-bottom: 25px;
+	max-width: 200px;
 	font-size: 22px;
 	border-radius: 15px;
 	text-align: center;
 }
 
-.btnReiniciar {
+.botones button{
 	cursor: pointer;
-	width: 160px;
+	width: 150px;
 	height: 40px;
-	font-size: 30px;
+	font-size: 25px;
 	border-radius: 20px;
-	margin-bottom: 20px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
 }
 
 .cartelFinPartida {
@@ -1404,9 +1407,11 @@ a.botoncarddoble:hover::before {
 	margin-bottom: 10px;
 	font-size: 30px;
 }
+
 .cartelFinPartida h1{
 	margin: 10px;
 }
+
 .cartelFinPartida .btnReiniciar{
 	position:relative;
 	top: 0;

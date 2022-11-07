@@ -2,7 +2,6 @@
 
 let porcentaje = document.getElementById("porcentaje");
 
-
 function carga1(){
     let num = Math.floor(Math.random() * (24 - 1) + 1);
     porcentaje.innerHTML = num + "%";
