@@ -105,7 +105,7 @@ class Tablero {
                 return 1;
             }
             posX++;
-            if (posX < this.maxColumas){
+            if (posX < this.maxColumas) {
                 celda = this.celdas[posY][posX];
             }
             else
@@ -212,7 +212,7 @@ class Tablero {
             y++;
         }
     }
-    
+
     draw() {
         for (let i = 0; i < this.maxFilas; i++) {
             for (let x = 0; x < this.celdas[i].length; x++) {

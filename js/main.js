@@ -21,8 +21,8 @@ function iniciar() {
     let btnReinicio2 = document.getElementById("btnReinicio2");
 
     btnReinicio.classList.remove("desaparecer");
-    btnReinicio.addEventListener("click", reinicio);
-    btnReinicio2.addEventListener("click", reinicio);
+    btnReinicio.addEventListener("click", iniciar);
+    btnReinicio2.addEventListener("click", iniciar);
 
     let temporizador = document.getElementById("temporizador");
     let canvas = document.getElementById("miCanvas");
@@ -63,6 +63,24 @@ function iniciar() {
         cartelFinPartida.classList.add("decaparecer");
         cartelFinPartida.classList.remove("cartelFinPartida");
         tablero = new Tablero(canvas.width, canvas.height, tipoJuego, ctx);
+        let jugador1 = new Jugador(nomj1);
+        let jugador2 = new Jugador(nomj2);
+        switch (tipoJuego) {
+            case "1":
+                CANT_FIG = 42;
+                limiteTiempo = 5;
+                break;
+            case "2":
+                CANT_FIG = 56;
+                limiteTiempo = 7;
+                break;
+            case "3":
+                CANT_FIG = 72;
+                limiteTiempo = 9;
+                break;
+            default:
+                break;
+        }
         turno = jugador1;
         jugador1.borrarFichas();
         jugador2.borrarFichas();
