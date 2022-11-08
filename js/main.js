@@ -7,8 +7,6 @@ let cartelFinGanador = document.getElementById("cartelFinGanador");
 
 function iniciar() {
     "use strict"
-    cartelFinPartida.classList.add("decaparecer");
-    cartelFinPartida.classList.remove("cartelFinPartida");
     document.getElementById("btnInicio").classList.add("desaparecer");
     let nomj1 = document.getElementById("nomJ1").value;
     let nomj2 = document.getElementById("nomJ2").value;
@@ -81,7 +79,10 @@ function iniciar() {
         turnoJ1.innerHTML = "Jugador UNSC";
         turnoJ2.innerHTML = "Jugador Coverant";
         turno = null;
+        imagenFondo = null;
         drawFigure();
+        cartelFinPartida.classList.remove("cartelFinPartida");
+        cartelFinPartida.classList.add("desaparecer");
         iniciar();
     }
 
@@ -152,7 +153,8 @@ function iniciar() {
 
     function drawFigure() {
         clearCanvas();
-        ctx.drawImage(imagenFondo, 0, 0, imagenFondo.width, imagenFondo.height);
+        if (imagenFondo != null)
+            ctx.drawImage(imagenFondo, 0, 0, imagenFondo.width, imagenFondo.height);
         tablero.draw();
         for (let index = 0; index < figuras.length; index++) {
             figuras[figuras.length - 1 - index].draw();
