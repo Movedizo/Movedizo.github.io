@@ -847,16 +847,48 @@ a.botoncarddoble:hover::before {
 	flex-direction: column;
 	align-items: center;
 }
-@keyframes traer-razas {
+@keyframes visbleRazas {
 	0% {
-		margin-left: 500px;
-		margin-right: 500px;
+		opacity: 0;
 	}
 
 	100% {
-		margin-left: 10px;
-		margin-right: 10px;
+		opacity: 1;
 	}
+}
+.contRazas{
+	opacity: 0;
+}
+.visbleRazas{
+	animation: visbleRazas 3s forwards;
+}
+@keyframes traer-razasDer {
+	0% {
+		-webkit-transform: translateX(-300px);
+		transform: translateX(-300px);
+	}
+
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+	}
+}
+@keyframes traer-razasIzq {
+	0% {
+		-webkit-transform: translateX(300px);
+		transform: translateX(300px);
+	}
+
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+	}
+}
+.traer-razasDer{
+	animation: traer-razasIzq 3s forwards;
+}
+.traer-razasIzq{
+	animation: traer-razasDer 3s forwards;
 }
 .mainLazamiento .razas img {
 	background-size: cover;
@@ -864,7 +896,6 @@ a.botoncarddoble:hover::before {
 	margin: 10px;
 	width: 400px;
 	height: 410px;
-	animation: traer-razas 5s forwards;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
 }
 

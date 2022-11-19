@@ -31,7 +31,7 @@ function iniciarindex() {
                 top += 25;
                 num++;
             }
-            else{
+            else {
                 num = 0;
                 top = 114;
             }
@@ -46,7 +46,7 @@ function iniciarindex() {
                 top += 25;
                 num++;
             }
-            else{
+            else {
                 num = 0;
                 top = 114;
             }
@@ -62,4 +62,23 @@ function iniciarindex() {
         }
         return boolean;
     }
+
+    
+
+    window.addEventListener('scroll', function()  {
+        let contRazas = document.querySelector(".contRazas");
+        let razaAngel = document.querySelector(".razaAngel");
+        let razaDemonio = document.querySelector(".razaDemonio");
+        let screenSize = window.innerHeight;
+        
+          if(contRazas.getBoundingClientRect().top < screenSize) {
+            contRazas.classList.add('visbleRazas');
+            razaAngel.classList.add('traer-razasIzq');
+            razaDemonio.classList.add('traer-razasDer');
+          } else {
+            contRazas.classList.remove('visbleRazas');
+            razaAngel.classList.remove('traer-razasIzq');
+            razaDemonio.classList.remove('traer-razasDer');
+          }
+      });
 }
