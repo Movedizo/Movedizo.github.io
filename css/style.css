@@ -15,8 +15,12 @@ a {
 
 a :hover {
 	color: rgb(252, 252, 250);
+} 
+header{
+	/*position: sticky;
+	top: 0;
+	z-index: 20;*/
 }
-
 header nav {
 	display: flex;
 	flex-direction: column;
@@ -907,9 +911,7 @@ a.botoncarddoble:hover::before {
 .traer-caracteristicasIzq{
 	animation: traer-caracteristicasIzq 3s forwards;
 }
-.imgCaracteristica{
 
-}
 .caracteristicas .fondoNegro {
 
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
@@ -1009,20 +1011,6 @@ a.botoncarddoble:hover::before {
 	z-index: 5;
 }
 
-.mainLazamiento .container {
-	width: 70%;
-	background-color: rgba(241, 229, 229, 0.651);
-	border-radius: 10px;
-	padding: 30px;
-}
-
-.mainLazamiento .container h5 {
-	font-size: 18px;
-	line-height: 1.5;
-	text-align: left;
-	/*Como separa los parrafos*/
-}
-
 .slider-container {
 	display: flex;
 	width: 800px;
@@ -1072,11 +1060,57 @@ a.botoncarddoble:hover::before {
 	font-size: 16px;
 	color: rgb(248, 219, 109);
 }
+.container img{
+	top: 150px;
+	position: sticky;
+	background-size: cover;
+	background-position: center;
+	border-radius:  40px;
+}
+.contHistoriaTexto{
+	min-width: 100%;
+}
+@keyframes desaparecerTexto {
+	0% {
+		opacity: 1;
+	}
 
+	100% {
+		opacity: 0;
+	}
+}
+.desaparecerTexto{
+	animation: desaparecerTexto 3s forwards;
+}
+.historiaTexto{
+	opacity: 0;
+	min-width: 60%;
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+.contHistoria{
+	display: flex;
+	width: 100%;
+	margin: 30px;
+}
+.contHistoria div{
+	width: 50%;
+}
 .container {
 	display: flex;
-	flex-direction: column;
+	flex-direction:column;
 	margin-bottom: 40px;
+	width: 100%;
+	background-color: rgba(241, 229, 229, 0.651);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.mainLazamiento .container h5 {
+	font-size: 18px;
+	line-height: 1.5;
+	text-align: left;
+	/*Como separa los parrafos*/
 }
 
 .container p {

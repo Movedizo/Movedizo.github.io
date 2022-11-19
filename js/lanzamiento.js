@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", iniciarindex);
 
 function iniciarindex() {
     "use strict"
-    /* document.querySelector('#btnUsuario').addEventListener("click", function () {
-         document.querySelector('#menuHamburguesa').classList.add("desaparecer");
-         document.querySelector('#menuPerfil').classList.toggle("desaparecer");
-     });
-     
-     document.querySelector('#btnHamburguesa').addEventListener("click", function () {
-         document.querySelector('#menuPerfil').classList.add("desaparecer");
-         document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
-     });*/
+    document.querySelector('#btnUsuario').addEventListener("click", function () {
+        document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
+        document.querySelector('#menuPerfil').classList.toggle("desaparecer");
+    });
+    /*
+    document.querySelector('#btnHamburguesa').addEventListener("click", function () {
+        document.querySelector('#menuPerfil').classList.add("desaparecer");
+        document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
+    });*/
 
     let linksDesplegables = document.querySelectorAll(".linkDesplegable");
     document.querySelector('#btnHamburguesa').addEventListener("click", traerMenu);
@@ -79,34 +79,60 @@ function iniciarindex() {
         let imgCaracteristicas = document.querySelectorAll(".imgCaracteristica");
         let translateX = 300;
         if (imgCaracteristicas[0].getBoundingClientRect().top < screenSize) {
-            for (let index = 0; index < imgCaracteristicas.length/2; index++) {
+            for (let index = 0; index < imgCaracteristicas.length / 2; index++) {
                 const element = imgCaracteristicas[index];
-                element.style.transform="translateX("+translateX+"px)";
+                element.style.transform = "translateX(" + translateX + "px)";
                 element.classList.add('traer-caracteristicasIzq');
                 translateX += -300;
             }
         }
         else {
             translateX = 300;
-            for (let index = 0; index < imgCaracteristicas.length/2; index++) {
+            for (let index = 0; index < imgCaracteristicas.length / 2; index++) {
                 const element = imgCaracteristicas[index];
                 element.classList.remove('traer-caracteristicasIzq');
             }
         }
-        if (imgCaracteristicas[imgCaracteristicas.length/2].getBoundingClientRect().top < screenSize) {
-            for (let index = imgCaracteristicas.length/2; index < imgCaracteristicas.length; index++) {
+        if (imgCaracteristicas[imgCaracteristicas.length / 2].getBoundingClientRect().top < screenSize) {
+            for (let index = imgCaracteristicas.length / 2; index < imgCaracteristicas.length; index++) {
                 const element = imgCaracteristicas[index];
-                element.style.transform="translateX("+translateX+"px)";
+                element.style.transform = "translateX(" + translateX + "px)";
                 element.classList.add('traer-caracteristicasIzq');
                 translateX += -300;
             }
         }
         else {
             translateX = 300;
-            for (let index = imgCaracteristicas.length/2; index < imgCaracteristicas.length; index++) {
+            for (let index = imgCaracteristicas.length / 2; index < imgCaracteristicas.length; index++) {
                 const element = imgCaracteristicas[index];
                 element.classList.remove('traer-caracteristicasIzq');
             }
+        }
+
+        let historiaTexto = document.querySelectorAll(".historiaTexto");
+        let imgHistoria = this.document.getElementById("imgHistoria");
+        for (let index = 0; index < historiaTexto.length; index++) {
+            const element = historiaTexto[index];
+            if (element.getBoundingClientRect().top + 400 < screenSize) {
+                if (index == 0)
+                    imgHistoria.src = "img/diabloBallMefisto.jpg";
+                else if (index == 1)
+                    imgHistoria.src = "img/heroesPeliando.jpg";
+                else if (index == 2)
+                    imgHistoria.src = "img/piedraDiablo.jpg";
+                else if (index == 3)
+                    imgHistoria.src = "img/meteorito.jpg";
+                element.classList.add("visbleRazas");
+            }
+            else
+                element.classList.remove("visbleRazas");
+        }
+        for (let index = 0; index < historiaTexto.length; index++) {
+            const element = historiaTexto[index];
+            if (element.getBoundingClientRect().top + 800 < screenSize)
+                element.classList.add("desaparecerTexto");
+            else
+                element.classList.remove("desaparecerTexto");
         }
     });
 }
