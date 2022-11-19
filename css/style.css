@@ -135,7 +135,7 @@ header nav {
 .aparecerMenu{
 	animation: traer-menu 3s forwards;
 }
-/*Hay que modificar todo solo es una prueba*/
+
 .linkDesplegable{
 	padding: 3px;
 	padding-left: 15px;
@@ -147,29 +147,8 @@ header nav {
 	top: 115px;
 }
 
-.menuHamburguesa2 nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.menuHamburguesa2 article {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	padding: 10px;
-	border-bottom: solid black 1px;
-	min-width: 150px;
-}
-
-.menuHamburguesa2 .media {
-	display: flex;
-	flex-direction: row;
-	margin: 10px;
-	border-bottom: solid black 0px;
-}
 /*Aca empieza el original*/
-.menuHamburguesa {
+/*.menuHamburguesa {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -200,8 +179,8 @@ header nav {
 	flex-direction: row;
 	margin: 10px;
 	border-bottom: solid black 0px;
-}
-
+}*/
+/*Ya no se usa*/
 .iconoRedes {
 	width: 22px;
 	Height: 22px;
@@ -868,13 +847,24 @@ a.botoncarddoble:hover::before {
 	flex-direction: column;
 	align-items: center;
 }
+@keyframes traer-razas {
+	0% {
+		margin-left: 500px;
+		margin-right: 500px;
+	}
 
+	100% {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
 .mainLazamiento .razas img {
 	background-size: cover;
 	background-position: center;
 	margin: 10px;
 	width: 400px;
 	height: 410px;
+	animation: traer-razas 5s forwards;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
 }
 
