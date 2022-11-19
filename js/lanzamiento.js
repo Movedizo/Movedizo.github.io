@@ -20,9 +20,7 @@ function iniciarindex() {
     let top = 114;
 
     function traerMenu() {
-        console.log(num);
         if (controlTraerMenu(linksDesplegables)) {
-            console.log("desaparecer");
             if (num < linksDesplegables.length) {
                 linksDesplegables[num].classList.remove("aparecerMenu");
                 linksDesplegables[num].classList.add("desaparecerMenu");
@@ -37,7 +35,6 @@ function iniciarindex() {
             }
         }
         else if (!controlTraerMenu(linksDesplegables)) {
-            console.log("traer");
             if (num < linksDesplegables.length) {
                 linksDesplegables[num].classList.remove("desaparecerMenu");
                 linksDesplegables[num].classList.add("aparecerMenu");
@@ -63,22 +60,53 @@ function iniciarindex() {
         return boolean;
     }
 
-    
-
-    window.addEventListener('scroll', function()  {
+    window.addEventListener('scroll', function () {
         let contRazas = document.querySelector(".contRazas");
         let razaAngel = document.querySelector(".razaAngel");
         let razaDemonio = document.querySelector(".razaDemonio");
         let screenSize = window.innerHeight;
-        
-          if(contRazas.getBoundingClientRect().top < screenSize) {
+
+        if (contRazas.getBoundingClientRect().top < screenSize) {
             contRazas.classList.add('visbleRazas');
             razaAngel.classList.add('traer-razasIzq');
             razaDemonio.classList.add('traer-razasDer');
-          } else {
+        } else {
             contRazas.classList.remove('visbleRazas');
             razaAngel.classList.remove('traer-razasIzq');
             razaDemonio.classList.remove('traer-razasDer');
-          }
-      });
+        }
+
+        let imgCaracteristicas = document.querySelectorAll(".imgCaracteristica");
+        let translateX = 300;
+        if (imgCaracteristicas[0].getBoundingClientRect().top < screenSize) {
+            for (let index = 0; index < imgCaracteristicas.length/2; index++) {
+                const element = imgCaracteristicas[index];
+                element.style.transform="translateX("+translateX+"px)";
+                element.classList.add('traer-caracteristicasIzq');
+                translateX += -300;
+            }
+        }
+        else {
+            translateX = 300;
+            for (let index = 0; index < imgCaracteristicas.length/2; index++) {
+                const element = imgCaracteristicas[index];
+                element.classList.remove('traer-caracteristicasIzq');
+            }
+        }
+        if (imgCaracteristicas[imgCaracteristicas.length/2].getBoundingClientRect().top < screenSize) {
+            for (let index = imgCaracteristicas.length/2; index < imgCaracteristicas.length; index++) {
+                const element = imgCaracteristicas[index];
+                element.style.transform="translateX("+translateX+"px)";
+                element.classList.add('traer-caracteristicasIzq');
+                translateX += -300;
+            }
+        }
+        else {
+            translateX = 300;
+            for (let index = imgCaracteristicas.length/2; index < imgCaracteristicas.length; index++) {
+                const element = imgCaracteristicas[index];
+                element.classList.remove('traer-caracteristicasIzq');
+            }
+        }
+    });
 }

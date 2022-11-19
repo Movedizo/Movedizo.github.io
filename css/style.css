@@ -898,7 +898,18 @@ a.botoncarddoble:hover::before {
 	height: 410px;
 	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7));
 }
+@keyframes traer-caracteristicasIzq {
 
+	100% {
+		transform: translateX(0px);
+	}
+}
+.traer-caracteristicasIzq{
+	animation: traer-caracteristicasIzq 3s forwards;
+}
+.imgCaracteristica{
+
+}
 .caracteristicas .fondoNegro {
 
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
@@ -907,7 +918,7 @@ a.botoncarddoble:hover::before {
 
 .caracteristicas ul {
 	display: flex;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	justify-content: center;
 }
 
