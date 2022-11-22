@@ -135,4 +135,91 @@ function iniciarindex() {
                 element.classList.remove("desaparecerTexto");
         }
     });
+
+    document.getElementById("flechaCaruselIzq").addEventListener('click', moverCarruselDer);
+    document.getElementById("flechaCaruselDer").addEventListener('click', moverCarruselIzq);
+    let personajes = document.querySelectorAll(".personaje");
+    let posPersonaje = personajes.length / 2 - 1;
+    function moverCarruselDer() {
+        if (posPersonaje > 0) {
+            removerClaseCarrusel("carruselIzq");
+            removerClaseCarrusel("carruselDer");
+            if (posPersonaje > 2 && posPersonaje < 6) {
+                personajes[posPersonaje - 2].classList.remove("personaje1");
+                personajes[posPersonaje - 1].classList.remove("personaje2");
+                personajes[posPersonaje].classList.remove("personaje3");
+                personajes[posPersonaje + 1].classList.remove("personaje4");
+                personajes[posPersonaje + 2].classList.remove("personaje5");
+
+                personajes[posPersonaje - 2].classList.add("carruselDer1");
+                personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje].classList.add("carruselDer3");
+                personajes[posPersonaje + 1].classList.add("carruselDer4");
+
+            }
+            else if (posPersonaje > 1 && posPersonaje < 7) {
+                personajes[posPersonaje - 2].classList.add("carruselDer1");
+                personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje].classList.add("carruselDer3");
+                personajes[posPersonaje + 1].classList.add("carruselDer4");
+
+            }
+            else if (posPersonaje == 1) {
+                personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje].classList.add("carruselDer3");
+                personajes[posPersonaje + 1].classList.add("carruselDer4");
+            }
+            else if (posPersonaje == 7) {
+                personajes[posPersonaje - 2].classList.add("carruselDer1");
+                personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje].classList.add("carruselDer3");
+            }
+            posPersonaje--;
+        }
+    }
+    function moverCarruselIzq() {
+        if (posPersonaje < personajes.length - 1) {
+            removerClaseCarrusel("carruselIzq");
+            removerClaseCarrusel("carruselDer");
+            if (posPersonaje < 6 && posPersonaje > 2) {
+                personajes[posPersonaje - 2].classList.remove("personaje1");
+                personajes[posPersonaje - 1].classList.remove("personaje2");
+                personajes[posPersonaje].classList.remove("personaje3");
+                personajes[posPersonaje + 1].classList.remove("personaje4");
+                personajes[posPersonaje + 2].classList.remove("personaje5");
+
+                personajes[posPersonaje + 2].classList.add("carruselIzq1");
+                personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje].classList.add("carruselIzq3");
+                personajes[posPersonaje - 1].classList.add("carruselIzq4");
+
+            }
+            else if (posPersonaje < 7 && posPersonaje > 2) {
+                personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje].classList.add("carruselIzq3");
+                personajes[posPersonaje - 1].classList.add("carruselIzq4");
+
+            }
+            else if (posPersonaje == 1 || posPersonaje == 2) {
+                personajes[posPersonaje + 2].classList.add("carruselIzq1");
+                personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje].classList.add("carruselIzq3");
+                personajes[posPersonaje - 1].classList.add("carruselIzq4");
+            }
+            else if (posPersonaje == 0) {
+                personajes[posPersonaje + 2].classList.add("carruselIzq1");
+                personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje].classList.add("carruselIzq3");
+            }
+            posPersonaje++;
+        }
+    }
+    function removerClaseCarrusel(texto) {
+        for (let index = 0; index < personajes.length; index++) {
+            for (let z = 1; z < 5; z++) {
+                const element = personajes[index];
+                element.classList.remove(texto + z);
+            }
+        }
+    }
 }
