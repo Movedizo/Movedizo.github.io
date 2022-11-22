@@ -77,7 +77,7 @@ function iniciarindex() {
         }
 
         let imgCaracteristicas = document.querySelectorAll(".imgCaracteristica");
-        let translateX = 300;
+        let translateX = -300;
         if (imgCaracteristicas[0].getBoundingClientRect().top < screenSize) {
             for (let index = 0; index < imgCaracteristicas.length / 2; index++) {
                 const element = imgCaracteristicas[index];
@@ -93,8 +93,10 @@ function iniciarindex() {
                 element.classList.remove('traer-caracteristicasIzq');
             }
         }
+        translateX = 900;
         if (imgCaracteristicas[imgCaracteristicas.length / 2].getBoundingClientRect().top < screenSize) {
             for (let index = imgCaracteristicas.length / 2; index < imgCaracteristicas.length; index++) {
+                console.log(translateX);
                 const element = imgCaracteristicas[index];
                 element.style.transform = "translateX(" + translateX + "px)";
                 element.classList.add('traer-caracteristicasIzq');
