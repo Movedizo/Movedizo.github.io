@@ -25,7 +25,7 @@ function iniciarindex() {
                 linksDesplegables[num].classList.remove("aparecerMenu");
                 linksDesplegables[num].classList.add("desaparecerMenu");
                 linksDesplegables[num].style.top = top + "px";
-                setTimeout(traerMenu, 500);
+                setTimeout(traerMenu, 100);
                 top += 25;
                 num++;
             }
@@ -39,7 +39,7 @@ function iniciarindex() {
                 linksDesplegables[num].classList.remove("desaparecerMenu");
                 linksDesplegables[num].classList.add("aparecerMenu");
                 linksDesplegables[num].style.top = top + "px";
-                setTimeout(traerMenu, 500);
+                setTimeout(traerMenu, 100);
                 top += 25;
                 num++;
             }
@@ -64,16 +64,29 @@ function iniciarindex() {
         let contRazas = document.querySelector(".contRazas");
         let razaAngel = document.querySelector(".razaAngel");
         let razaDemonio = document.querySelector(".razaDemonio");
+        let razaNombre = document.querySelectorAll(".nombreRaza");
         let screenSize = window.innerHeight;
 
         if (contRazas.getBoundingClientRect().top < screenSize) {
             contRazas.classList.add('visbleRazas');
             razaAngel.classList.add('traer-razasIzq');
             razaDemonio.classList.add('traer-razasDer');
+            razaNombre[0].classList.add('traerNombreRaza');
+            razaNombre[1].classList.add('traerNombreRaza');
+            razaNombre[0].style.transform = "translateY(-500px)";
+            razaNombre[1].style.transform = "translateY(500px)";
         } else {
             contRazas.classList.remove('visbleRazas');
             razaAngel.classList.remove('traer-razasIzq');
             razaDemonio.classList.remove('traer-razasDer');
+            razaNombre[0].classList.remove('traerNombreRaza');
+            razaNombre[1].classList.remove('traerNombreRaza');
+        }
+        if (contRazas.getBoundingClientRect().top + 1000 < screenSize) {
+            contRazas.classList.add('desaparecerTexto');
+        }
+        else {
+            contRazas.classList.remove('desaparecerTexto');
         }
 
         let imgCaracteristicas = document.querySelectorAll(".imgCaracteristica");
@@ -96,7 +109,6 @@ function iniciarindex() {
         translateX = 900;
         if (imgCaracteristicas[imgCaracteristicas.length / 2].getBoundingClientRect().top < screenSize) {
             for (let index = imgCaracteristicas.length / 2; index < imgCaracteristicas.length; index++) {
-                console.log(translateX);
                 const element = imgCaracteristicas[index];
                 element.style.transform = "translateX(" + translateX + "px)";
                 element.classList.add('traer-caracteristicasIzq');
@@ -116,13 +128,13 @@ function iniciarindex() {
         for (let index = 0; index < historiaTexto.length; index++) {
             const element = historiaTexto[index];
             if (element.getBoundingClientRect().top + 400 < screenSize) {
-                if (index == 0)
+                if (index >= 1 && index < 2)
                     imgHistoria.src = "img/diabloBallMefisto.jpg";
-                else if (index == 1)
+                else if (index >= 3 && index < 4)
                     imgHistoria.src = "img/heroesPeliando.jpg";
-                else if (index == 2)
+                else if (index >= 5 && index < 6)
                     imgHistoria.src = "img/piedraDiablo.jpg";
-                else if (index == 3)
+                else if (index >= 7)
                     imgHistoria.src = "img/meteorito.jpg";
                 element.classList.add("visbleRazas");
             }
@@ -140,7 +152,7 @@ function iniciarindex() {
 
     document.getElementById("flechaCaruselIzq").addEventListener('click', moverCarruselDer);
     document.getElementById("flechaCaruselDer").addEventListener('click', moverCarruselIzq);
-    let personajes = document.querySelectorAll(".personaje");
+    let personajes = document.querySelectorAll(".targeta");
     let posPersonaje = personajes.length / 2 - 1;
     function moverCarruselDer() {
         if (posPersonaje > 0) {
@@ -148,13 +160,17 @@ function iniciarindex() {
             removerClaseCarrusel("carruselDer");
             if (posPersonaje > 2 && posPersonaje < 6) {
                 personajes[posPersonaje - 2].classList.remove("personaje1");
-                personajes[posPersonaje - 1].classList.remove("personaje2");
+                personajes[posPersonaje - 1].classList.remove("personaje2")
                 personajes[posPersonaje].classList.remove("personaje3");
+                personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje + 1].classList.remove("personaje4");
                 personajes[posPersonaje + 2].classList.remove("personaje5");
 
+
+
                 personajes[posPersonaje - 2].classList.add("carruselDer1");
                 personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje - 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselDer3");
                 personajes[posPersonaje + 1].classList.add("carruselDer4");
 
@@ -162,19 +178,25 @@ function iniciarindex() {
             else if (posPersonaje > 1 && posPersonaje < 7) {
                 personajes[posPersonaje - 2].classList.add("carruselDer1");
                 personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje - 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselDer3");
+                personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje + 1].classList.add("carruselDer4");
 
             }
             else if (posPersonaje == 1) {
                 personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje - 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselDer3");
+                personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje + 1].classList.add("carruselDer4");
             }
             else if (posPersonaje == 7) {
                 personajes[posPersonaje - 2].classList.add("carruselDer1");
                 personajes[posPersonaje - 1].classList.add("carruselDer2");
+                personajes[posPersonaje - 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselDer3");
+                personajes[posPersonaje].classList.remove("personaje");
             }
             posPersonaje--;
         }
@@ -186,32 +208,40 @@ function iniciarindex() {
             if (posPersonaje < 6 && posPersonaje > 2) {
                 personajes[posPersonaje - 2].classList.remove("personaje1");
                 personajes[posPersonaje - 1].classList.remove("personaje2");
+                personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje].classList.remove("personaje3");
                 personajes[posPersonaje + 1].classList.remove("personaje4");
                 personajes[posPersonaje + 2].classList.remove("personaje5");
 
                 personajes[posPersonaje + 2].classList.add("carruselIzq1");
                 personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje +1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselIzq3");
                 personajes[posPersonaje - 1].classList.add("carruselIzq4");
 
             }
             else if (posPersonaje < 7 && posPersonaje > 2) {
                 personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje +1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselIzq3");
+                personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje - 1].classList.add("carruselIzq4");
 
             }
             else if (posPersonaje == 1 || posPersonaje == 2) {
                 personajes[posPersonaje + 2].classList.add("carruselIzq1");
                 personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje + 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselIzq3");
+                personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje - 1].classList.add("carruselIzq4");
             }
             else if (posPersonaje == 0) {
                 personajes[posPersonaje + 2].classList.add("carruselIzq1");
                 personajes[posPersonaje + 1].classList.add("carruselIzq2");
+                personajes[posPersonaje + 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselIzq3");
+                personajes[posPersonaje].classList.remove("personaje");
             }
             posPersonaje++;
         }
