@@ -17,44 +17,220 @@ a :hover {
 	color: rgb(252, 252, 250);
 }
 
-header {
-	/*position: sticky;
-	top: 0;
-	z-index: 20;*/
-}
-
 header nav {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
 }
 
+@keyframes desplasarLogo {
+	0% {
+		transform: rotate(0deg);
+		left: 0px;
+	}
+
+	100% {
+		transform: rotate(-720deg);
+		left: -100px;
+	}
+}
+
+.desplasarLogo {
+	animation: desplasarLogo 5s forwards;
+}
+@keyframes desplasarLogoDes {
+	0% {
+		transform: rotate(-720deg);
+		left: -100px;
+	}
+	100% {
+		transform: rotate(0deg);
+		left: 0px;
+	}
+
+}
+.desplasarLogoDes {
+	animation: desplasarLogoDes 5s forwards;
+}
+.contLogoImg {
+	Width: 120px;
+	Height: 120px;
+}
+
 .logo {
+	position: absolute;
 	border-radius: 100%;
 	Width: 90px;
 	Height: 90px;
 	margin: 10px;
-	Top: 15px;
-	Left: 29px;
-	left: 2.01%;
-	right: 90.78%;
-	top: 12.93%;
-	bottom: 9.48%;
 }
 
+@keyframes achicarLogo {
+	0% {
+		max-height: 120px;
+	}
+
+	100% {
+		max-height: 50px;
+	}
+}
+
+.achicarLogo {
+	animation: achicarLogo 5s forwards;
+}
+@keyframes achicarLogoDes {
+	0% {
+		max-height: 50px;
+	}
+	100% {
+		max-height: 120px;
+	}
+
+}
+.achicarLogoDes {
+	animation: achicarLogoDes 5s forwards;
+}
+.contHeaderLogo{
+	Width:120px;
+	Height: 120px;
+}
 .headerLogo {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgb(248, 242, 109);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 15;
+}
+
+.contAnimacionHambuerguesa {
+	Width: 45px;
+	Height: 45px;
+	margin: 5px;
+}
+
+@keyframes moverCruz {
+	0% {
+		transform: rotate(0deg);
+		left: 1310px;
+	}
+
+	100% {
+		transform: rotate(-720deg);
+		left: 35px;
+	}
+}
+@keyframes moverCruzDes {
+	0% {
+		transform: rotate(-720deg);
+		left: 35px;
+	}
+	100% {
+		transform: rotate(0deg);
+		left: 1310px;
+	}
+}
+.moverCruzDes {
+	animation: moverCruzDes 5s forwards;
+}
+.moverCruz {
+	animation: moverCruz 5s forwards;
 }
 
 .iconoHeader {
+	position: absolute;
+	border-radius: 100%;
+	Width: 45px;
+	Height: 45px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/*animation: moverCruz 5s forwards;*/
+}
+
+.iconoHeaderPerfil {
 	border-radius: 100%;
 	margin: 5px;
 	Width: 45px;
 	Height: 45px;
 	cursor: pointer;
+}
+
+.contLogo {
+	display: flex;
+}
+
+@keyframes cruz1 {
+	100% {
+		transform: rotate(45deg) translatey(9.5px) translatex(9.5px);
+	}
+}
+@keyframes cruz2 {
+	100% {
+		transform: rotate(135deg);
+	}
+}
+@keyframes cruz3 {
+	100% {
+		transform: rotate(45deg) translatey(-9.3px) translatex(-9.3px);
+	}
+}
+@keyframes cruz1Des {
+	0% {
+		transform: rotate(45deg) translatey(9.5px) translatex(9.5px);
+	}
+	100% {
+		transform: rotate(0deg) translatey(0px) translatex(0px);
+	}
+}
+@keyframes cruz2Des {
+	0% {
+		transform: rotate(135deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes cruz3Des {
+	0% {
+		transform: rotate(45deg) translatey(-9.3px) translatex(-9.3px);
+	}
+	100% {
+		transform: rotate(0deg) translatey(0px) translatex(0px);
+	}
+}
+.cruz1Des {
+	animation: cruz1Des 5s forwards;
+}
+.cruz2Des {
+	animation: cruz2Des 5s forwards;
+}
+.cruz3Des {
+	animation: cruz3Des 5s forwards;
+}
+.cruz1Animacion {
+	animation: cruz1 5s forwards;
+}
+
+.cruz2Animacion {
+	animation: cruz2 5s forwards;
+}
+
+.cruz3Animacion {
+	animation: cruz3 5s forwards;
+}
+
+.iconoHeader .cruz {
+	max-Width: 30px;
+	min-height: 4px;
+	background-color: rgb(0, 0, 0);
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 6px;
+	border-radius: 20px;
 }
 
 .busqueda {
@@ -156,8 +332,8 @@ header nav {
 	top: 115px;
 }
 
-/*Aca empieza el original*/
-/*.menuHamburguesa {
+
+.menuHamburguesaOriginal {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -168,13 +344,13 @@ header nav {
 	z-index: 10;
 }
 
-.menuHamburguesa nav {
+.menuHamburguesaOriginal nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.menuHamburguesa article {
+.menuHamburguesaOriginal article {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -183,13 +359,13 @@ header nav {
 	min-width: 150px;
 }
 
-.menuHamburguesa .media {
+.menuHamburguesaOriginal .media {
 	display: flex;
 	flex-direction: row;
 	margin: 10px;
 	border-bottom: solid black 0px;
-}*/
-/*Ya no se usa*/
+}
+
 .iconoRedes {
 	width: 22px;
 	Height: 22px;
@@ -207,6 +383,7 @@ footer {
 }
 
 footer .logo {
+	position: relative;
 	width: 45px;
 	Height: 45px;
 }
@@ -698,12 +875,12 @@ a.botoncarddoble:hover::before {
 }
 
 .fondoLanzamiento {
-	opacity: 0.5;
 	z-index: -10;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-repeat: initial;
+
+	background-color: rgb(10, 10, 10);
 }
 
 .mainLazamiento {
@@ -866,17 +1043,19 @@ a.botoncarddoble:hover::before {
 		opacity: 1;
 	}
 }
+
 @keyframes traerNombreRaza {
 	100% {
 		transform: translateY(0px);
 	}
 }
-.traerNombreRaza{
+
+.traerNombreRaza {
 	animation: traerNombreRaza 3s forwards;
 }
-.nombreRaza{
 
-}
+.nombreRaza {}
+
 .contRazas {
 	opacity: 0;
 }
@@ -1041,23 +1220,25 @@ a.botoncarddoble:hover::before {
 	justify-content: space-between;
 	align-items: center;
 }
-.flechaCarrusel{
+
+.flechaCarrusel {
 	width: 100px;
 	height: 100px;
 }
+
 .imgFlechaCarrusel {
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 
 	border-radius: 100%;
 	transition: 1s;
 	cursor: pointer;
 }
 
-.flechaCarrusel:hover .imgFlechaCarrusel{
+.flechaCarrusel:hover .imgFlechaCarrusel {
 	transform: scale(1.5);
-	background-color: rgba(104, 95, 95, 0.315);
-	border: solid black 0.5px;
+	background-color: rgba(196, 184, 184, 0.267);
+	border: solid rgb(255, 255, 255) 0.5px;
 }
 
 .personajes {
@@ -1078,105 +1259,131 @@ a.botoncarddoble:hover::before {
 	transition: 1s;
 	transform-style: preserve-3d;
 }
-.targeta{
+
+.targeta {
 	opacity: 0;
 }
+
 .front {
 	transform: perspective(500px) rotateY(0deg);
 }
+
 .back {
 	transform: perspective(500px) rotateY(180deg);
 }
+
 .personaje:hover .front {
 	transform: perspective(500px) rotateY(180deg);
 }
+
 .personaje:hover .back {
 	transform: perspective(500px) rotateY(360deg);
 }
+
 .personaje1 {
 	opacity: 0;
 	transform: rotateY(240deg) translateZ(182px) translateX(320px);
 }
+
 .personaje2 {
 	opacity: 1;
 
 	transform: rotateY(240deg) translateZ(182px) translateX(40px);
 }
+
 .personaje3 {
 	opacity: 1;
 	transform: rotateY(0) translateZ(182px) translateX(-130px);
 }
+
 .personaje4 {
 	opacity: 1;
 	transform: rotateY(120deg) translateZ(182px) translateX(-270px);
 }
+
 .personaje5 {
 	opacity: 0;
 	transform: rotateY(120deg) translateZ(182px) translateX(-550px);
 }
+
 @keyframes carruselDer1 {
 	100% {
 		opacity: 1;
 		transform: rotateY(240deg) translateZ(182px) translateX(40px);
 	}
 }
-.carruselDer1{
+
+.carruselDer1 {
 	animation: carruselDer1 2s forwards;
 }
+
 @keyframes carruselDer2 {
 	0% {
 		transform: translateX(-270px);
 	}
+
 	100% {
 		opacity: 1;
 		transform: rotateY(0) translateZ(182px) translateX(-130px);
 	}
 }
-.carruselDer2{
+
+.carruselDer2 {
 	animation: carruselDer2 2s forwards;
 }
+
 @keyframes carruselDer3 {
 	100% {
 		opacity: 1;
 		transform: rotateY(120deg) translateZ(182px) translateX(-270px);
 	}
 }
-.carruselDer3{
+
+.carruselDer3 {
 	animation: carruselDer3 2s forwards;
 }
+
 @keyframes carruselDer4 {
 	0% {
 		transform: translateX(40px);
 	}
+
 	100% {
 		opacity: 0;
 		transform: rotateY(120deg) translateZ(182px) translateX(-550px);
 	}
 }
-.carruselDer4{
+
+.carruselDer4 {
 	animation: carruselDer4 2s forwards;
 }
+
 @keyframes carruselIzq1 {
 	100% {
 		opacity: 1;
 		transform: rotateY(120deg) translateZ(182px) translateX(-270px);
 	}
 }
-.carruselIzq1{
+
+.carruselIzq1 {
 	animation: carruselIzq1 2s forwards;
 }
+
 @keyframes carruselIzq2 {
 	0% {
-		transform:translateX(-270px);
+		transform: translateX(-270px);
 	}
+
 	100% {
 		opacity: 1;
 		transform: rotateY(0) translateZ(182px) translateX(-130px);
 	}
 }
-.carruselIzq2{
+
+.carruselIzq2 {
 	animation: carruselIzq2 2s forwards;
 }
+
 @keyframes carruselIzq3 {
 	100% {
 		opacity: 1;
@@ -1184,21 +1391,26 @@ a.botoncarddoble:hover::before {
 		transform: rotateY(240deg) translateZ(182px) translateX(40px);
 	}
 }
-.carruselIzq3{
+
+.carruselIzq3 {
 	animation: carruselIzq3 2s forwards;
 }
+
 @keyframes carruselIzq4 {
 	0% {
 		transform: translateX(100px);
 	}
+
 	100% {
 		opacity: 0;
 		transform: rotateY(240deg) translateZ(182px) translateX(320px);
 	}
 }
-.carruselIzq4{
+
+.carruselIzq4 {
 	animation: carruselIzq4 2s forwards;
 }
+
 .fondoDemonioHeroe {
 	background-image: url("../img/demonHeroe.jpg");
 	background-size: cover;
@@ -1246,7 +1458,8 @@ a.botoncarddoble:hover::before {
 	padding: 5px 5px 5px 8px;
 	z-index: 3;
 }
-.sombraFondoHeroe{
+
+.sombraFondoHeroe {
 	position: absolute;
 	width: 250px;
 	height: 300px;
@@ -1254,11 +1467,12 @@ a.botoncarddoble:hover::before {
 	z-index: 2;
 	border-radius: 20px;
 }
+
 .descripcionHeroe {
 	padding: 10px 10px 10px 12px;
 	font-size: 16px;
 	color: rgb(248, 219, 109);
-	z-index:3;
+	z-index: 3;
 }
 
 .container img {
@@ -1309,7 +1523,7 @@ a.botoncarddoble:hover::before {
 	flex-direction: column;
 	margin-bottom: 40px;
 	width: 100%;
-	background-color: rgba(241, 229, 229, 0.651);
+	background-color: rgb(241, 229, 229);
 	border-radius: 10px;
 	padding: 30px;
 }
@@ -1323,7 +1537,7 @@ a.botoncarddoble:hover::before {
 
 .container p {
 	font-size: 18px;
-	line-height : 25px;
+	line-height: 25px;
 	margin-top: 120px;
 }
 

@@ -3,17 +3,37 @@ document.addEventListener("DOMContentLoaded", iniciarindex);
 function iniciarindex() {
     "use strict"
     document.querySelector('#btnUsuario').addEventListener("click", function () {
-        document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
         document.querySelector('#menuPerfil').classList.toggle("desaparecer");
     });
-    /*
-    document.querySelector('#btnHamburguesa').addEventListener("click", function () {
-        document.querySelector('#menuPerfil').classList.add("desaparecer");
-        document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
-    });*/
+
+    /* document.querySelector('#btnHamburguesa').addEventListener("click", function () {
+         document.querySelector('#menuPerfil').classList.add("desaparecer");
+         document.querySelector('#menuHamburguesa').classList.toggle("desaparecer");
+     });*/
 
     let linksDesplegables = document.querySelectorAll(".linkDesplegable");
     document.querySelector('#btnHamburguesa').addEventListener("click", traerMenu);
+    let desplegado = false;
+    document.querySelector('#btnHamburguesa').addEventListener("click", function () {
+        let cruces = document.querySelectorAll(".cruz");
+        if (!desplegado) {
+            for (let index = 0; index < cruces.length; index++) {
+                const element = cruces[index];
+                element.classList.remove("cruz" + (index + 1) + "Des");
+                element.classList.add("cruz" + (index + 1) + "Animacion");
+            }
+            desplegado = true;
+        }
+        else {
+            for (let index = 0; index < cruces.length; index++) {
+                const element = cruces[index];
+                element.classList.remove("cruz" + (index + 1) + "Animacion");
+                element.classList.add("cruz" + (index + 1) + "Des");
+            }
+            desplegado = false;
+        }
+        // document.getElementById('').classList.toggle(""); 
+    });
 
 
     let num = 0;
@@ -59,7 +79,7 @@ function iniciarindex() {
         }
         return boolean;
     }
-
+    let menuSticky = false;
     window.addEventListener('scroll', function () {
         let contRazas = document.querySelector(".contRazas");
         let razaAngel = document.querySelector(".razaAngel");
@@ -148,6 +168,36 @@ function iniciarindex() {
             else
                 element.classList.remove("desaparecerTexto");
         }
+
+        let contHeaderLogo = document.querySelector(".contHeaderLogo");
+        let headerLogo = document.querySelector(".headerLogo");
+        let logo = document.querySelector(".logo"); 
+        let iconoHeader = document.querySelector(".iconoHeader");
+
+        if (contHeaderLogo.getBoundingClientRect().top + 1200 < screenSize) {
+            contHeaderLogo.classList.remove("achicarLogoDes");
+            headerLogo.classList.remove("achicarLogoDes");
+            logo.classList.remove("desplasarLogoDes");
+            iconoHeader.classList.remove("moverCruzDes");
+
+            contHeaderLogo.classList.add("achicarLogo");
+            headerLogo.classList.add("achicarLogo");
+            logo.classList.add("desplasarLogo");
+            iconoHeader.classList.add("moverCruz");
+            menuSticky = true;
+        }
+        else if (contHeaderLogo.getBoundingClientRect().top < screenSize && menuSticky) {
+            console.log("entro");
+            contHeaderLogo.classList.remove("achicarLogo");
+            headerLogo.classList.remove("achicarLogo");
+            logo.classList.remove("desplasarLogo");
+            iconoHeader.classList.remove("moverCruz");
+
+            contHeaderLogo.classList.add("achicarLogoDes");
+            headerLogo.classList.add("achicarLogoDes");
+            logo.classList.add("desplasarLogoDes");
+            iconoHeader.classList.add("moverCruzDes");
+        }
     });
 
     document.getElementById("flechaCaruselIzq").addEventListener('click', moverCarruselDer);
@@ -215,14 +265,14 @@ function iniciarindex() {
 
                 personajes[posPersonaje + 2].classList.add("carruselIzq1");
                 personajes[posPersonaje + 1].classList.add("carruselIzq2");
-                personajes[posPersonaje +1].classList.add("personaje");
+                personajes[posPersonaje + 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselIzq3");
                 personajes[posPersonaje - 1].classList.add("carruselIzq4");
 
             }
             else if (posPersonaje < 7 && posPersonaje > 2) {
                 personajes[posPersonaje + 1].classList.add("carruselIzq2");
-                personajes[posPersonaje +1].classList.add("personaje");
+                personajes[posPersonaje + 1].classList.add("personaje");
                 personajes[posPersonaje].classList.add("carruselIzq3");
                 personajes[posPersonaje].classList.remove("personaje");
                 personajes[posPersonaje - 1].classList.add("carruselIzq4");
