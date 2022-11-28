@@ -30,28 +30,30 @@ header nav {
 	}
 
 	100% {
-		transform: rotate(-720deg);
+		transform: rotate(-360deg);
 		left: -100px;
 	}
 }
 
 .desplasarLogo {
-	animation: desplasarLogo 5s forwards;
+	animation: desplasarLogo 1s forwards;
 }
+
 @keyframes desplasarLogoDes {
 	0% {
-		transform: rotate(-720deg);
+		transform: rotate(-360deg);
 		left: -100px;
 	}
 	100% {
 		transform: rotate(0deg);
 		left: 0px;
 	}
+}
 
-}
 .desplasarLogoDes {
-	animation: desplasarLogoDes 5s forwards;
+	animation: desplasarLogoDes 1s forwards;
 }
+
 .contLogoImg {
 	Width: 120px;
 	Height: 120px;
@@ -76,8 +78,9 @@ header nav {
 }
 
 .achicarLogo {
-	animation: achicarLogo 5s forwards;
+	animation: achicarLogo 2s forwards;
 }
+
 @keyframes achicarLogoDes {
 	0% {
 		max-height: 50px;
@@ -85,15 +88,17 @@ header nav {
 	100% {
 		max-height: 120px;
 	}
+}
 
-}
 .achicarLogoDes {
-	animation: achicarLogoDes 5s forwards;
+	animation: achicarLogoDes 2s forwards;
 }
+
 .contHeaderLogo{
 	Width:120px;
 	Height: 120px;
 }
+
 .headerLogo {
 	display: flex;
 	justify-content: space-between;
@@ -122,6 +127,7 @@ header nav {
 		left: 35px;
 	}
 }
+
 @keyframes moverCruzDes {
 	0% {
 		transform: rotate(-720deg);
@@ -133,10 +139,10 @@ header nav {
 	}
 }
 .moverCruzDes {
-	animation: moverCruzDes 5s forwards;
+	animation: moverCruzDes 2s forwards;
 }
 .moverCruz {
-	animation: moverCruz 5s forwards;
+	animation: moverCruz 2s forwards;
 }
 
 .iconoHeader {
@@ -168,16 +174,19 @@ header nav {
 		transform: rotate(45deg) translatey(9.5px) translatex(9.5px);
 	}
 }
+
 @keyframes cruz2 {
 	100% {
 		transform: rotate(135deg);
 	}
 }
+
 @keyframes cruz3 {
 	100% {
 		transform: rotate(45deg) translatey(-9.3px) translatex(-9.3px);
 	}
 }
+
 @keyframes cruz1Des {
 	0% {
 		transform: rotate(45deg) translatey(9.5px) translatex(9.5px);
@@ -186,6 +195,7 @@ header nav {
 		transform: rotate(0deg) translatey(0px) translatex(0px);
 	}
 }
+
 @keyframes cruz2Des {
 	0% {
 		transform: rotate(135deg);
@@ -194,6 +204,7 @@ header nav {
 		transform: rotate(0deg);
 	}
 }
+
 @keyframes cruz3Des {
 	0% {
 		transform: rotate(45deg) translatey(-9.3px) translatex(-9.3px);
@@ -202,25 +213,29 @@ header nav {
 		transform: rotate(0deg) translatey(0px) translatex(0px);
 	}
 }
+
 .cruz1Des {
-	animation: cruz1Des 5s forwards;
+	animation: cruz1Des 2s forwards;
 }
+
 .cruz2Des {
-	animation: cruz2Des 5s forwards;
+	animation: cruz2Des 2s forwards;
 }
+
 .cruz3Des {
-	animation: cruz3Des 5s forwards;
+	animation: cruz3Des 2s forwards;
 }
+
 .cruz1Animacion {
-	animation: cruz1 5s forwards;
+	animation: cruz1 2s forwards;
 }
 
 .cruz2Animacion {
-	animation: cruz2 5s forwards;
+	animation: cruz2 2s forwards;
 }
 
 .cruz3Animacion {
-	animation: cruz3 5s forwards;
+	animation: cruz3 2s forwards;
 }
 
 .iconoHeader .cruz {
@@ -332,7 +347,6 @@ header nav {
 	top: 115px;
 }
 
-
 .menuHamburguesaOriginal {
 	display: flex;
 	flex-direction: column;
@@ -341,7 +355,7 @@ header nav {
 	max-width: 40%;
 	border-bottom-left-radius: 20px;
 	background-color: rgb(248, 242, 109);
-	z-index: 10;
+	z-index: 20;
 }
 
 .menuHamburguesaOriginal nav {
@@ -612,8 +626,6 @@ h4 {
 	border-radius: 20px;
 }
 
-
-
 .card {
 	width: 290px;
 	height: 350px;
@@ -649,7 +661,6 @@ h4 {
 	font-size: 20px;
 	color: black;
 }
-
 
 h1 {
 	font-size: 40px;
@@ -874,15 +885,6 @@ a.botoncarddoble:hover::before {
 	margin-bottom: 70px;
 }
 
-.fondoLanzamiento {
-	z-index: -10;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-
-	background-color: rgb(10, 10, 10);
-}
-
 .mainLazamiento {
 	position: relative;
 	display: flex;
@@ -1054,8 +1056,6 @@ a.botoncarddoble:hover::before {
 	animation: traerNombreRaza 3s forwards;
 }
 
-.nombreRaza {}
-
 .contRazas {
 	opacity: 0;
 }
@@ -1106,7 +1106,6 @@ a.botoncarddoble:hover::before {
 }
 
 @keyframes traer-caracteristicasIzq {
-
 	100% {
 		transform: translateX(0px);
 	}
@@ -1117,7 +1116,6 @@ a.botoncarddoble:hover::before {
 }
 
 .caracteristicas .fondoNegro {
-
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	z-index: -5;
 }
@@ -1287,7 +1285,6 @@ a.botoncarddoble:hover::before {
 
 .personaje2 {
 	opacity: 1;
-
 	transform: rotateY(240deg) translateZ(182px) translateX(40px);
 }
 
@@ -1464,7 +1461,7 @@ a.botoncarddoble:hover::before {
 	width: 250px;
 	height: 300px;
 	background-color: rgba(0, 0, 0, 0.300);
-	z-index: 2;
+	z-index: 2;z-index: 20;
 	border-radius: 20px;
 }
 
@@ -1476,8 +1473,10 @@ a.botoncarddoble:hover::before {
 }
 
 .container img {
-	top: 150px;
 	position: sticky;
+	top:150px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	background-size: cover;
 	background-position: center;
 	border-radius: 40px;
@@ -1485,6 +1484,7 @@ a.botoncarddoble:hover::before {
 
 .contHistoriaTexto {
 	min-width: 100%;
+	margin-bottom: 50px;
 }
 
 @keyframes desaparecerTexto {
@@ -1498,7 +1498,7 @@ a.botoncarddoble:hover::before {
 }
 
 .desaparecerTexto {
-	animation: desaparecerTexto 3s forwards;
+	animation: desaparecerTexto 1s forwards;
 }
 
 .historiaTexto {
@@ -1515,22 +1515,20 @@ a.botoncarddoble:hover::before {
 }
 
 .contHistoria div {
-	width: 50%;
+	width: 100%;
 }
 
 .container {
+	width: 1200px;
 	display: flex;
-	flex-direction: column;
-	margin-bottom: 40px;
-	width: 100%;
 	background-color: rgb(241, 229, 229);
 	border-radius: 10px;
-	padding: 30px;
+	margin-bottom: 30px;
 }
 
 .mainLazamiento .container h5 {
 	font-size: 18px;
-	line-height: 1.5;
+	line-height: 1;
 	text-align: left;
 	/*Como separa los parrafos*/
 }
@@ -1538,7 +1536,7 @@ a.botoncarddoble:hover::before {
 .container p {
 	font-size: 18px;
 	line-height: 25px;
-	margin-top: 120px;
+	margin-top: 100px;
 }
 
 .cuatroEnLinea section {
@@ -1971,8 +1969,6 @@ a.botoncarddoble:hover::before {
 	-webkit-text-stroke: 0.5px black;
 }
 
-
-
 .icon-cards {
 	width: 500px;
 	height: 150px;
@@ -1997,26 +1993,113 @@ a.botoncarddoble:hover::before {
 }
 
 .icon-cards__item:nth-child(1) {
-
 	transform: rotateY(0) translateZ(182px);
 }
 
 .icon-cards__item:nth-child(2) {
-
 	transform: rotateY(120deg) translateZ(182px);
 }
 
 .icon-cards__item:nth-child(3) {
-
 	transform: rotateY(240deg) translateZ(182px);
 }
 
 .icon-cards__item:nth-child(4) {
-
 	transform: rotateY(360deg) translateZ(182px);
 }
 
 .icon-cards__item:nth-child(5) {
-
 	transform: rotateY(480deg) translateZ(182px);
+}
+ 
+.parallax {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.parallax::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, black, transparent);
+}
+
+.loQueSigue{
+	position: relative;
+	padding: 100px;
+	background: black;
+  }
+  
+
+.parallax img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.fondoCastillo{
+	z-index: 10;
+}
+
+.fondoPiso{
+	z-index: 11;
+}
+
+.fondoPiso{
+	z-index: 11;
+	transform: translateY(0px);
+}
+
+.text{
+	position: absolute;
+	right: 0px;
+	color: rgb(165, 90, 67);
+	white-space: nowrap;
+	font-size: 5.5vw;
+	z-index: 9;
+	transform: translateY(30px);
+}
+
+.boton{
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px 20px;
+	border-radius: 20px;
+	background: rgb(216, 173, 120);
+	color: black;
+	font-size: 1.3em;
+	z-index: 15;
+	transform: translateY(130px);
+}
+
+.animacionFuego{
+	margin-left: 30px;
+	margin-top: 20px;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	background-color: rgb(255, 255, 255);	
+}
+
+.animacionFuegoSpriteSheet{
+	animation: fuego 5s steps(60) infinite;
+}
+
+@keyframes fuego{
+	from {
+		transform: translate3d(0px,0,0)
+	}
+	100%{
+		transform: translate3d(-100%,0,0)
+	}
 }

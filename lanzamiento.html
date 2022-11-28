@@ -131,25 +131,18 @@
 
     <main class="mainLazamiento">
         <div class="fondoLanzamiento"></div>
-        <section class="anuncioHeader">
-            <div class="fondoNegro"></div>
-            <div class="anuncioContenido">
-                <h1>La batalla esta por comenzar 22/10/22</h1>
-                <article>
-                    <div class="anuncioInfo">
-                        <h3>¡Battle of Heaven Against Hell está en camino! Obtén la precompra de uno de los juegos mas
-                            esperados de 2022.</h3>
-                        <div class="anicionBotones">
-                            <button class="fifth">Mas informacion</button>
-                            <button class="fifth">Precompra</button>
-                        </div>
-                    </div>
-                    <div class="anuncioImg">
-                        <img src="img/diabloIMG.png" alt="">
-                    </div>
-                </article>
-            </div>
+        <section class="parallax">
+            <img  src="img/fondo.png" class="fondo" id="fondo">
+            <img src="img/nubesAtras.png" class="nubesAtras" id="nubesAtras">
+            <img src="img/fondoMontanaAtras.png" class="fondoMontanaAtras" id="fondoMontanaAtras">
+            <img src="img/fondoMontanaAdelante.png" class="fondoMontanaAdelante" id="fondoMontanaAdelante">
+            <img src="img/fondoNube.png" class="fondoNube" id="fondoNube">
+            <h2 class="text" id="text">Heaven Against Hell</h2>
+            <a href="#" class="fifth" id="boton">Jugar</a>
+            <img src="img/fondoCastillo.png" class="fondoCastillo" id="fondoCastillo">
+            <img src="img/fondoPiso.png" class="fondoPiso" id="fondoPiso">
         </section>
+        
         <section class="razas">
             <h2>Elige entre dos razas</h2>
             <article class="contRazas">
@@ -216,8 +209,11 @@
             </div>
         </section>
 
-        <section>
+        <section class="heroes"> 
             <h2>Heroes</h2>
+            <div class="animacionFuego">
+                <img class="animacionFuegoSpriteSheet" src="img/animacionFuego.png" alt="aniFuego">
+            </div>
             <div class="carrusel">
                 <div class="flechaCarrusel">
                     <img class="imgFlechaCarrusel" src="img/flechaDer (2).png" alt="" id="flechaCaruselIzq">
@@ -322,7 +318,12 @@
                     <img class="imgFlechaCarrusel" src="img/flechaIzq (2).png" alt="" id="flechaCaruselDer">
                 </div>
             </div>
+
+            <div class="animacionFuego">
+                <img class="animacionFuegoSpriteSheet" src="img/animacionFuego.png" alt="aniFuego">
+            </div>   
         </section>
+
         <section>
             <h2>Historia</h2>
             <article class="container">
@@ -510,6 +511,7 @@
             </article>
         </section>
     </footer>
+    <script src="js/fuego.js"></script>
 </body>
 
 </html>
