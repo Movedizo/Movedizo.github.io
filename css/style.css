@@ -905,7 +905,7 @@ a.botoncarddoble:hover::before {
 	-webkit-text-stroke: 0.5px black;
 	font-size: 80px;
 	margin-top: 80px;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 .mainLazamiento section {
@@ -1499,6 +1499,23 @@ a.botoncarddoble:hover::before {
 	z-index: 3;
 }
 
+.slider-containerHistoria {
+	cursor:row-resize;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 70%;
+	height: 250px;
+	overflow-x: scroll;
+	margin-left: 200px;
+	margin-bottom: 50px; 
+}
+
+.slider-containerHistoria::-webkit-scrollbar {
+	display: none;
+}
+
 .container img {
 	position: sticky;
 	top:150px;
@@ -1774,16 +1791,20 @@ a.botoncarddoble:hover::before {
 }
 
 .slider-containerComntario {
+	cursor:row-resize;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	width: 55%;
+	width: 70%;
 	height: 250px;
 	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
-	margin-left: 400px;
-	margin-bottom: 50px;
+	margin-left: 200px;
+	margin-bottom: 50px; 
+}
+
+.slider-containerComntario::-webkit-scrollbar {
+	display: none;
 }
 
 .breadcrumb {
