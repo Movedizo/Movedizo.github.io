@@ -187,7 +187,6 @@ function iniciarindex() {
             menuSticky = true;
         }
         else if (contHeaderLogo.getBoundingClientRect().top < screenSize && menuSticky) {
-            console.log("entro");
             contHeaderLogo.classList.remove("achicarLogo");
             headerLogo.classList.remove("achicarLogo");
             logo.classList.remove("desplasarLogo");

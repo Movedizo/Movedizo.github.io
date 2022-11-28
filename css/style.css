@@ -969,7 +969,7 @@ a.botoncarddoble:hover::before {
 	z-index: -10;
 	position: absolute;
 	width: 100%;
-	height: 45%;
+	height: 49%;
 
 	background-color: rgb(10, 10, 10);
 }
@@ -1234,7 +1234,7 @@ a.botoncarddoble:hover::before {
 	background-position: center;
 	background-repeat: repeat;
 	min-width: 100%;
-	min-height: 40px;
+	min-height: 50px;
 	z-index: 12;
 	margin-top: 100px;
 	margin-bottom: 10px;
@@ -1558,9 +1558,9 @@ a.botoncarddoble:hover::before {
 .fondoGradiente{
 	position: absolute;
 	width: 100%;
-	min-height: 180px;
+	min-height: 220px;
 	background: linear-gradient(to top, rgb(10, 10, 10),60%, transparent);
-	top: 715px;
+	top: 670px;
 	z-index: 12;
 }
 .mainLazamiento .container h5 {
@@ -2059,21 +2059,6 @@ a.botoncarddoble:hover::before {
 	align-items:center;
 }
 
-.parallax::before{
-	content: '';
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 100px;
-	background: linear-gradient(to top, black, transparent);
-}
-
-.loQueSigue{
-	position: relative;
-	padding: 100px;
-	background: black;
-}
-  
 
 .parallax img{
 	position: absolute;
@@ -2085,6 +2070,8 @@ a.botoncarddoble:hover::before {
 }
 
 .fondoCastillo{
+	transform-origin: bottom left;
+	scale: 1;
 	z-index: 7;
 }
 
@@ -2122,8 +2109,9 @@ a.botoncarddoble:hover::before {
 .animacionFuego{
 	margin-left: 30px;
 	margin-top: 20px;
-	width: 500px;
-	height: 500px;
+	margin-right: 20px;
+	width: 250px;
+	height: 250px;
 	overflow: hidden;
 	background-color: rgb(255, 255, 255);	
 }
