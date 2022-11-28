@@ -97,6 +97,7 @@ header nav {
 .contHeaderLogo{
 	Width:120px;
 	Height: 120px;
+	z-index: 20;
 }
 
 .headerLogo {
@@ -107,7 +108,7 @@ header nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 15;
+	z-index: 20;
 }
 
 .contAnimacionHambuerguesa {
@@ -138,9 +139,11 @@ header nav {
 		left: 1310px;
 	}
 }
+
 .moverCruzDes {
 	animation: moverCruzDes 2s forwards;
 }
+
 .moverCruz {
 	animation: moverCruz 2s forwards;
 }
