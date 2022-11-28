@@ -218,27 +218,27 @@ header nav {
 }
 
 .cruz1Des {
-	animation: cruz1Des 2s forwards;
+	animation: cruz1Des 0.5s forwards;
 }
 
 .cruz2Des {
-	animation: cruz2Des 2s forwards;
+	animation: cruz2Des 0.5s forwards;
 }
 
 .cruz3Des {
-	animation: cruz3Des 2s forwards;
+	animation: cruz3Des 0.5s forwards;
 }
 
 .cruz1Animacion {
-	animation: cruz1 2s forwards;
+	animation: cruz1 0.5s forwards;
 }
 
 .cruz2Animacion {
-	animation: cruz2 2s forwards;
+	animation: cruz2 0.5s forwards;
 }
 
 .cruz3Animacion {
-	animation: cruz3 2s forwards;
+	animation: cruz3 0.5s forwards;
 }
 
 .iconoHeader .cruz {
@@ -332,11 +332,11 @@ header nav {
 }
 
 .desaparecerMenu {
-	animation: quitar-menu 2s forwards;
+	animation: quitar-menu 0.5s forwards;
 }
 
 .aparecerMenu {
-	animation: traer-menu 2s forwards;
+	animation: traer-menu 0.5s forwards;
 }
 
 .linkDesplegable {
@@ -1502,22 +1502,6 @@ a.botoncarddoble:hover::before {
 	z-index: 3;
 }
 
-/*.slider-containerHistoria {
-	cursor:row-resize;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	height: 500px;
-	overflow-x: scroll;
-	margin-bottom: 50px; 
-	border-radius: 40px;
-}
-
-.slider-containerHistoria::-webkit-scrollbar {
-	display: none;
-}*/
 
 .container img {
 	position: sticky;
@@ -1545,7 +1529,7 @@ a.botoncarddoble:hover::before {
 }
 
 .desaparecerTexto {
-	animation: desaparecerTexto 1s forwards;
+	animation: desaparecerTexto 0.5s forwards;
 }
 
 .historiaTexto {
