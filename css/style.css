@@ -1579,9 +1579,9 @@ a.botoncarddoble:hover::before {
 	position: absolute;
 	width: 100%;
 	min-height: 220px;
-	background: linear-gradient(to top, rgb(10, 10, 10),60%, transparent);
+	background: linear-gradient(to top, rgb(10, 10, 10),70%, transparent);
 	top: 550px;
-	z-index: 12;
+	z-index: 15;
 }
 
 .mainLazamiento .container h5 {
