@@ -21,9 +21,9 @@ window.addEventListener('scroll', function () {
   //fondoCastillo.style.bottom = value * 0.1 + 'px';
   if (1 * multiplicacion >= 1 && 1 * multiplicacion <= 1.2) {
     fondoCastillo.style.transform = "scale(" + (1 * multiplicacion) + ")";
-    fondoMontanaAtras.style.transform = "translatey(" + (1 * -multiplicacionPX) + "px)" + "translatex(" + (1 * -multiplicacionPX) + "px)" + "scale(" + (1 * multiplicacion) + ")";
+    //fondoMontanaAtras.style.transform = "translatey(" + (1 * -multiplicacionPX) + "px)" + "translatex(" + (1 * -multiplicacionPX) + "px)" + "scale(" + (1 * multiplicacion) + ")";
     fondoMontanaAdelante.style.transform = "translatey(" + (1 * -multiplicacionPX) + "px)" + "translatex(" + (1 * -multiplicacionPX) + "px)" + "scale(" + (1 * multiplicacion) + ")";
-    nubesAtras.style.transform = "translatey(" + (1 * multiplicacionPX)+ "px)" ;
+    //nubesAtras.style.transform = "translatey(" + (1 * multiplicacionPX)+ "px)" ;
     fondoNube.style.transform = "translatey(" + (1 * multiplicacionPX)+ "px)" ;
   }
  // fondoPiso.style.bottom = value * -30 + 'px';
